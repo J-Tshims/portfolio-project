@@ -11,7 +11,7 @@ Projet personnel pour construire un portfolio avec Django et apprendre progressi
 - Django est configure pour trouver les templates globaux et les fichiers statiques; `base.html` et `theme.js` ont ete verifies avec les outils Django.
 - Le formulaire de contact est une maquette frontend : son message n'est pas encore envoye ni enregistre.
 - Les migrations integrees de Django pour `admin`, `auth`, `contenttypes` et `sessions` ont ete appliquees avec succes.
-- Git est initialise localement. Aucun commit ni envoi sur GitHub n'a encore ete effectue.
+- Le commit local initial a ete cree sur la branche `master`. Aucun depot distant GitHub n'est encore configure.
 - La sortie de `git status --short --ignored` a confirme que `.venv/`, `db.sqlite3` et les caches Python sont ignores.
 - Le projet utilise SQLite en local. La version de Django constatee dans l'environnement lors de la redaction est `6.0.3`.
 
@@ -47,9 +47,11 @@ Le panneau d'administration est disponible sur `http://127.0.0.1:8000/admin/`. L
 - [x] Creer la vue `home` qui rend `portfolio/base.html`.
 - [x] Relier la vue `home` a l'URL racine `/` et verifier la reponse HTTP 200.
 - [x] Appliquer les migrations integrees de Django avant d'utiliser l'administration.
-- [x] Initialiser le depot Git local.
+- [x] Initialiser le depot Git local et preparer les fichiers non ignores.
 - [x] Verifier que `.venv/`, `db.sqlite3` et les caches sont exclus de Git.
-- [ ] Ajouter et inspecter les fichiers autorises avant le premier commit.
+- [x] Creer le commit local initial.
+- [ ] Enregistrer les dernieres mises a jour documentaires dans un commit local.
+- [ ] Creer un depot GitHub vide, le relier au depot local et y envoyer les commits.
 - [ ] Choisir les donnees a rendre administrables, puis creer les modeles utiles.
 - [ ] Enregistrer les modeles dans l'administration Django.
 - [ ] Connecter le formulaire de contact au backend avec validation et protection CSRF.
