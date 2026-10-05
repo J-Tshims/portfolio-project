@@ -1,0 +1,192 @@
+{% load static %}
+<!-- Template principal : ressources globales et assemblage des composants portfolio. -->
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jonathan Tshimbalanga — AI Software Engineer & Backend Developer</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Scripts front-end separes par responsabilite. -->
+    <script src="{% static 'portfolio/js/tailwind-config.js' %}"></script>
+    <script src="{% static 'portfolio/js/theme.js' %}"></script>
+    <script src="{% static 'portfolio/js/navigation.js' %}"></script>
+    <script src="{% static 'portfolio/js/project-filter.js' %}"></script>
+    <script src="{% static 'portfolio/js/animations.js' %}"></script>
+    <script src="{% static 'portfolio/js/contact-form.js' %}"></script>
+    <!-- Google Fonts: Inter & Fira Code -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            cursor: default;
+        }
+
+        /* Custom Cursor */
+        .custom-cursor {
+            pointer-events: none;
+            position: fixed;
+            width: 32px;
+            height: 32px;
+            border: 2px solid rgba(236, 72, 153, 0.6);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transition: width 0.2s, height 0.2s, background-color 0.2s;
+            z-index: 9999;
+            display: none;
+        }
+        @media (min-width: 1024px) {
+            .custom-cursor { display: block; }
+        }
+        .custom-cursor-dot {
+            pointer-events: none;
+            position: fixed;
+            width: 8px;
+            height: 8px;
+            background-color: #3b82f6;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 10000;
+            display: none;
+        }
+        @media (min-width: 1024px) {
+            .custom-cursor-dot { display: block; }
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #ec4899 0%, #3b82f6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .gradient-border {
+            position: relative;
+            border-radius: 1.5rem;
+            background: linear-gradient(135deg, rgba(236, 72, 153, 0.6), rgba(59, 130, 246, 0.6));
+            padding: 1px;
+        }
+
+        .gradient-border-inner {
+            background: #101017;
+            border-radius: calc(1.5rem - 1px);
+        }
+
+        .light .gradient-border-inner {
+            background: #ffffff;
+        }
+
+        .glass-panel {
+            background: rgba(16, 16, 23, 0.75);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .light .glass-panel {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(0, 0, 0, 0.08);
+        }
+
+        .bg-mesh {
+            background-image: radial-gradient(at 15% 15%, rgba(236, 72, 153, 0.14) 0px, transparent 50%),
+                              radial-gradient(at 85% 85%, rgba(59, 130, 246, 0.14) 0px, transparent 50%);
+        }
+
+        .light .bg-mesh {
+            background-image: radial-gradient(at 15% 15%, rgba(236, 72, 153, 0.08) 0px, transparent 50%),
+                              radial-gradient(at 85% 85%, rgba(59, 130, 246, 0.08) 0px, transparent 50%);
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-12px) rotate(1deg); }
+        }
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes floatSlow {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-18px) rotate(-2deg); }
+        }
+        .animate-float-slow {
+            animation: floatSlow 9s ease-in-out infinite;
+        }
+
+        @keyframes pulseGlow {
+            0%, 100% { opacity: 0.4; transform: scale(1); }
+            50% { opacity: 0.8; transform: scale(1.08); }
+        }
+        .animate-glow {
+            animation: pulseGlow 6s ease-in-out infinite;
+        }
+
+        /* Scroll Animation Classes */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #07070a;
+        }
+        .light ::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #27272a;
+            border-radius: 4px;
+        }
+        .light ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #ec4899;
+        }
+    </style>
+</head>
+<body class="bg-darkbg text-slate-100 dark bg-mesh min-h-screen selection:bg-pink-500 selection:text-white">
+<div class="custom-cursor" id="cursor"></div>
+    <div class="custom-cursor-dot" id="cursorDot"></div>
+{% block content %}
+{% include "portfolio/components/navbar.html" %}
+<main>
+    {% include "portfolio/components/hero.html" %}
+    {% include "portfolio/components/about.html" %}
+    {% include "portfolio/components/skills.html" %}
+    {% include "portfolio/components/projects.html" %}
+    {% include "portfolio/components/parcours.html" %}
+    {% include "portfolio/components/services.html" %}
+    {% include "portfolio/components/contact.html" %}
+</main>
+{% include "portfolio/components/footer.html" %}{% endblock %}
+<!-- Toast Notification Modal (No alert used) -->
+    <div id="toast" class="fixed bottom-6 right-6 z-50 transform translate-y-32 opacity-0 transition-all duration-300 glass-panel border border-emerald-500/30 px-6 py-4 rounded-2xl shadow-2xl flex items-center space-x-3">
+        <div class="w-8 h-8 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center">
+            <i class="fa-solid fa-check"></i>
+        </div>
+        <div>
+            <div class="text-sm font-bold text-slate-900 dark:text-white">Message envoyé !</div>
+            <div class="text-xs text-slate-400">Merci, je vous répondrai très rapidement.</div>
+        </div>
+    </div>
+</body>
+</html>
