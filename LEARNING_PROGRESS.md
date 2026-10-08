@@ -6,28 +6,34 @@ Ce fichier est un pense-bête de projet. Vérifie toujours le code réel et les 
 
 ## Objectif
 
-Apprendre Django en construisant ce portfolio, une étape à la fois. L'utilisateur préfère une explication très simple, une seule action concrète par étape, les commandes PowerShell exactes, puis une pause pour lui laisser essayer et rapporter le résultat.
+Apprendre Django en construisant ce portfolio, une étape à la fois. L'utilisateur préfère une explication très simple, une seule action concrète par étape, les commandes PowerShell exactes, puis une pause pour lui laisser essayer et rapporter son résultat.
 
-## Etat verifie du projet (2026-10-05)
+## Etat verifie du projet (2026-10-08)
 
 - Django 6.0.3 dans l'environnement vérifié.
 - Application `portfolio` enregistrée dans `INSTALLED_APPS`.
-- `config/settings.py` lit maintenant `SECRET_KEY` depuis la variable d'environnement Windows. La vraie valeur ne doit jamais être demandée, affichée ou ajoutée à une note.
-- `python manage.py check` a réussi après le changement de clé.
-- Django résout `portfolio/base.html` dans `templates/portfolio/`.
-- `STATICFILES_DIRS` pointe vers le dossier `static/`; `findstatic portfolio/js/theme.js --verbosity 2` trouve le fichier dans `static/portfolio/js/`.
-- `portfolio/models.py`, `admin.py` et `tests.py` restent des squelettes.
-- `portfolio/views.py` contient maintenant `home(request)`, qui rend `portfolio/base.html`.
-- `config/urls.py` relie maintenant `/` à `views.home`; l'utilisateur a confirmé que `GET /` renvoie HTTP 200 et que le portfolio s'affiche.
-- Le commit initial existe sur la branche `master`. `git remote` ne trouve aucun dépôt distant GitHub.
-- Après ce commit, seuls `README.md` et `LEARNING_PROGRESS.md` sont modifiés; ces mises à jour doivent encore être ajoutées dans un second commit avant la publication.
-- `git status --short --ignored` montre les fichiers sources non suivis et confirme que `.venv/`, `db.sqlite3` et les caches Python sont ignorés. La clé de `settings.py` provient de l'environnement, aucune valeur littérale n'y est présente.
-- L'utilisateur a exécuté `python manage.py migrate`; les 18 migrations intégrées pour `admin`, `auth`, `contenttypes` et `sessions` ont toutes affiché `OK`.
+- `config/settings.py` lit `SECRET_KEY` depuis la variable d'environnement Windows. La vraie valeur ne doit jamais être demandée, affichée ou ajoutée à une note.
+- `python manage.py check` a réussi après les changements de modèles et de template.
+- Django résout [templates/portfolio/base.html](templates/portfolio/base.html) et [templates/portfolio/components/projects.html](templates/portfolio/components/projects.html).
+- Le modèle `Project` contient maintenant les champs `title`, `description`, `category`, `technologies`, `link`, `github_url`, `icon` et `created_at`.
+- Le template de projets affiche maintenant les données réelles de la base et les boutons GitHub / Demo conditionnellement.
+- Le filtre JavaScript est désormais cohérent avec les catégories réelles des projets, via le champ `category` de la base.
+- `python manage.py makemigrations portfolio ; python manage.py migrate ; python manage.py check` a été exécuté avec succès, et la commande a retourné `System check identified no issues (0 silenced)`.
+- L'admin Django permet maintenant de créer des projets et d'en choisir la catégorie directement dans l'interface.
+- Les modèles `Skill`, `Service` et `Experience` existent aussi et sont enregistrés dans l'admin; leurs sections de page restent toutefois statiques.
+- Le nom affiché dans l'accueil, la navigation, la section À propos et le pied de page est maintenant Jonathan Tshimbalanga.
+- La photo `static/portfolio/images/Jonathan.png` est reliée au cadre du profil. Le rendu Django contient son chemin statique et `python manage.py check` réussit; vérifier encore l'apparence dans le navigateur. Les coordonnées et liens sociaux sont aussi à personnaliser.
 - Le formulaire de contact reste une maquette frontend qui affiche un toast local; aucun message n'est envoyé ni enregistré.
 
-## Etape en cours : préparer Git avant les modèles
+## Etape en cours : alimenter le portfolio avec des vraies données
 
-La vue, le template et la route `/` répondent avec HTTP 200. Les migrations Django intégrées sont appliquées. Le premier commit local existe sur `master`; aucun dépôt distant n'est configuré. Seuls les deux fichiers documentaires ont des changements après ce commit. Prochaine action : les commiter, puis créer un dépôt GitHub vide et pousser `master`.
+La section projets lit les objets `Project` depuis la base. Il reste à ajouter et vérifier les vraies données dans l'admin, puis à relier les sections compétences, services et parcours aux modèles déjà existants.
+
+## Etape en cours : préparer la publication
+
+Le dépôt est sur `master` et suit `origin/master`. Des changements de code et trois fichiers de migration sont encore locaux et non commités. Les migrations `portfolio` 0001 à 0004 sont appliquées.
+
+`python manage.py check --deploy` signale six avertissements de sécurité, notamment `DEBUG=True`, `ALLOWED_HOSTS` vide et des protections HTTPS/cookies non activées. Il faut préparer les réglages de production et choisir un hébergeur avant de partager un lien public sur LinkedIn.
 
 La recherche initiale de `theme.js` n'avait rien trouvé. Après vérification des réglages et une nouvelle recherche, Django l'a trouvé dans `static/portfolio/js/`. L'étape templates/static est donc validée avec l'état actuel.
 
@@ -35,11 +41,10 @@ Ne pas modifier les fichiers à la place de l'utilisateur : il apprend en réali
 
 ## Chemin d'apprentissage restant
 
-1. Commiter les mises à jour de README et de progression.
-2. Créer un dépôt GitHub vide, ajouter son URL comme `origin`, puis pousser `master`.
-3. Choisir avec l'utilisateur les données à gérer dans l'admin; concevoir les modèles utiles seulement après son accord.
-4. Créer et appliquer les migrations, puis enregistrer les modèles dans l'admin.
-5. Afficher les données dans les templates avec le contexte de la vue.
-6. Connecter le formulaire avec validation, CSRF, enregistrement en base et tests. Décider séparément si des emails sont nécessaires.
+1. Vérifier la photo dans le navigateur, puis remplacer les exemples de localisation, email et liens sociaux.
+2. Ajouter les vrais projets et contenus dans l'admin, puis rendre les sections compétences, services et parcours dynamiques.
+3. Finir et tester le formulaire de contact.
+4. Préparer l'hébergement, les réglages de sécurité, les fichiers statiques et les données de production.
+5. Relire le portfolio en mobile et ordinateur, exécuter les tests, committer puis déployer.
 
 Respecter `.github/agents/backend.md`. Ne pas modifier les fichiers à la place de l'utilisateur; expliquer et attendre ses résultats.
