@@ -9,6 +9,8 @@ Projet personnel pour construire un portfolio avec Django et apprendre progressi
 - Les modeles Project, Skill, Service et Experience existent et sont inscrits dans l'administration Django.
 - La section des projets affiche les donnees de la base; les sections competences, services et parcours restent actuellement en dur dans leurs templates.
 - Le nom visible de la page d'accueil est maintenant Jonathan Tshimbalanga. La photo `static/portfolio/images/Jonathan.png` est reliée au cadre de profil; le chemin statique a été vérifié dans le rendu Django.
+- Le hero reprend la référence avec une composition en deux colonnes, des encarts de compétences, une bande de points forts et une palette bleu nuit, magenta, violet et bleu électrique. Les sections suivantes gardent leur disposition avec des accents harmonisés.
+- L'accueil a été vérifié dans le navigateur en bureau et mobile sans débordement horizontal. Le bouton secondaire du hero mène au parcours, car aucun CV PDF n'est encore fourni.
 - Le formulaire de contact et plusieurs coordonnees et liens sociaux sont encore des exemples; remplace-les par tes vraies informations avant publication.
 - La vue `home` dans `portfolio/views.py` rend `portfolio/base.html` et est reliee a l'URL `/`; l'utilisateur a confirme que la page repond avec HTTP 200.
 - Django est configure pour trouver les templates globaux et les fichiers statiques; `base.html` et `theme.js` ont ete verifies avec les outils Django.
@@ -59,7 +61,8 @@ Le panneau d'administration est disponible sur `http://127.0.0.1:8000/admin/`. L
 - [ ] Relier les sections compétences, services et parcours aux données de l'administration.
 - [ ] Remplacer les identités, coordonnées et liens d'exemple par les informations réelles.
 - [x] Ajouter la photo de profil et vérifier que Django la sert.
-- [ ] Vérifier visuellement la photo de profil dans le navigateur.
+- [x] Vérifier visuellement la photo de profil dans le navigateur.
+- [x] Adapter le hero à la référence et harmoniser la palette des autres sections.
 - [ ] Connecter le formulaire de contact au backend avec validation et protection CSRF.
 - [ ] Ecrire des tests pour la page, les contenus et le formulaire.
 

@@ -23,6 +23,8 @@ Apprendre Django en construisant ce portfolio, une étape à la fois. L'utilisat
 - Les modèles `Skill`, `Service` et `Experience` existent aussi et sont enregistrés dans l'admin; leurs sections de page restent toutefois statiques.
 - Le nom affiché dans l'accueil, la navigation, la section À propos et le pied de page est maintenant Jonathan Tshimbalanga.
 - La photo `static/portfolio/images/Jonathan.png` est reliée au cadre du profil. Le rendu Django contient son chemin statique et `python manage.py check` réussit; vérifier encore l'apparence dans le navigateur. Les coordonnées et liens sociaux sont aussi à personnaliser.
+- Le hero reprend la composition de la référence et la palette bleu nuit, magenta, violet et bleu électrique; les sections suivantes gardent leur disposition avec des couleurs harmonisées. Dans la carte profil, le prénom et le nom apparaissent maintenant sur deux lignes.
+- Les captures du navigateur en bureau et mobile ont été vérifiées; le nom tient sur une ligne dans la carte photo et aucun débordement horizontal n'est présent.
 - Le formulaire de contact reste une maquette frontend qui affiche un toast local; aucun message n'est envoyé ni enregistré.
 
 ## Etape en cours : alimenter le portfolio avec des vraies données
@@ -41,7 +43,7 @@ Ne pas modifier les fichiers à la place de l'utilisateur : il apprend en réali
 
 ## Chemin d'apprentissage restant
 
-1. Vérifier la photo dans le navigateur, puis remplacer les exemples de localisation, email et liens sociaux.
+1. Remplacer les exemples de localisation, email et liens sociaux. Ajouter le CV PDF si le bouton de téléchargement de la référence est souhaité.
 2. Ajouter les vrais projets et contenus dans l'admin, puis rendre les sections compétences, services et parcours dynamiques.
 3. Finir et tester le formulaire de contact.
 4. Préparer l'hébergement, les réglages de sécurité, les fichiers statiques et les données de production.

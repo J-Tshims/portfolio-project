@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
             this.size = Math.random() * 2 + 0.5;
             this.speedX = (Math.random() - 0.5) * 0.6;
             this.speedY = (Math.random() - 0.5) * 0.6;
-            this.color = Math.random() > 0.5 ? '#ec4899' : '#3b82f6';
+            this.color = Math.random() > 0.5 ? '#d946ef' : '#168bff';
         }
 
         update() {

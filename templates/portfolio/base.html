@@ -34,7 +34,7 @@
             position: fixed;
             width: 32px;
             height: 32px;
-            border: 2px solid rgba(236, 72, 153, 0.6);
+            border: 2px solid rgba(217, 70, 239, 0.7);
             border-radius: 50%;
             transform: translate(-50%, -50%);
             transition: width 0.2s, height 0.2s, background-color 0.2s;
@@ -49,7 +49,7 @@
             position: fixed;
             width: 8px;
             height: 8px;
-            background-color: #3b82f6;
+            background-color: #168bff;
             border-radius: 50%;
             transform: translate(-50%, -50%);
             z-index: 10000;
@@ -60,7 +60,7 @@
         }
 
         .gradient-text {
-            background: linear-gradient(135deg, #ec4899 0%, #3b82f6 100%);
+            background: linear-gradient(105deg, #e62eff 0%, #a13cff 46%, #168bff 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
@@ -68,12 +68,12 @@
         .gradient-border {
             position: relative;
             border-radius: 1.5rem;
-            background: linear-gradient(135deg, rgba(236, 72, 153, 0.6), rgba(59, 130, 246, 0.6));
+            background: linear-gradient(135deg, rgba(217, 70, 239, 0.65), rgba(22, 139, 255, 0.65));
             padding: 1px;
         }
 
         .gradient-border-inner {
-            background: #101017;
+            background: #0a1124;
             border-radius: calc(1.5rem - 1px);
         }
 
@@ -82,7 +82,7 @@
         }
 
         .glass-panel {
-            background: rgba(16, 16, 23, 0.75);
+            background: rgba(10, 17, 36, 0.82);
             backdrop-filter: blur(16px);
             -webkit-backdrop-filter: blur(16px);
             border: 1px solid rgba(255, 255, 255, 0.08);
@@ -96,13 +96,13 @@
         }
 
         .bg-mesh {
-            background-image: radial-gradient(at 15% 15%, rgba(236, 72, 153, 0.14) 0px, transparent 50%),
-                              radial-gradient(at 85% 85%, rgba(59, 130, 246, 0.14) 0px, transparent 50%);
+            background-image: radial-gradient(at 15% 15%, rgba(217, 70, 239, 0.16) 0px, transparent 50%),
+                              radial-gradient(at 85% 85%, rgba(22, 139, 255, 0.16) 0px, transparent 50%);
         }
 
         .light .bg-mesh {
-            background-image: radial-gradient(at 15% 15%, rgba(236, 72, 153, 0.08) 0px, transparent 50%),
-                              radial-gradient(at 85% 85%, rgba(59, 130, 246, 0.08) 0px, transparent 50%);
+            background-image: radial-gradient(at 15% 15%, rgba(217, 70, 239, 0.08) 0px, transparent 50%),
+                              radial-gradient(at 85% 85%, rgba(22, 139, 255, 0.08) 0px, transparent 50%);
         }
 
         @keyframes float {
@@ -145,13 +145,13 @@
             width: 8px;
         }
         ::-webkit-scrollbar-track {
-            background: #07070a;
+            background: #030817;
         }
         .light ::-webkit-scrollbar-track {
             background: #f1f5f9;
         }
         ::-webkit-scrollbar-thumb {
-            background: #27272a;
+            background: #1a2540;
             border-radius: 4px;
         }
         .light ::-webkit-scrollbar-thumb {
@@ -159,11 +159,11 @@
             border-radius: 4px;
         }
         ::-webkit-scrollbar-thumb:hover {
-            background: #ec4899;
+            background: #d946ef;
         }
     </style>
 </head>
-<body class="bg-darkbg text-slate-100 dark bg-mesh min-h-screen selection:bg-pink-500 selection:text-white">
+<body class="bg-darkbg text-slate-100 dark bg-mesh min-h-screen selection:bg-fuchsia-500 selection:text-white">
 <div class="custom-cursor" id="cursor"></div>
     <div class="custom-cursor-dot" id="cursorDot"></div>
 {% block content %}

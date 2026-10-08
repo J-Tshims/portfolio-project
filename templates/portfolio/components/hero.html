@@ -1,107 +1,102 @@
 {% load static %}
 <!-- Composant portfolio : hero -->
-<section id="hero" class="relative min-h-screen flex items-center justify-center pt-28 pb-16 overflow-hidden">
-        <!-- Canvas Background for Particles -->
-        <canvas id="particleCanvas" class="absolute inset-0 pointer-events-none z-0 opacity-40"></canvas>
+<section id="hero" class="relative overflow-hidden pt-24">
+    <canvas id="particleCanvas" class="absolute inset-0 pointer-events-none z-0 opacity-40"></canvas>
+    <div class="absolute -left-48 top-1/4 h-96 w-96 rounded-full bg-primary/20 blur-[130px] pointer-events-none"></div>
+    <div class="absolute -right-48 bottom-10 h-96 w-96 rounded-full bg-secondary/20 blur-[130px] pointer-events-none"></div>
 
-        <!-- Background Glow Elements -->
-        <div class="absolute top-1/4 left-1/3 -translate-x-1/2 -translate-y-1/2 w-[550px] h-[550px] bg-primary/20 rounded-full blur-[130px] pointer-events-none animate-glow"></div>
-        <div class="absolute top-2/3 right-1/4 w-[450px] h-[450px] bg-secondary/20 rounded-full blur-[130px] pointer-events-none animate-glow" style="animation-delay: 3s;"></div>
-
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                <!-- Hero Left Content -->
-                <div class="lg:col-span-7 space-y-8 text-center lg:text-left">
-                    <div class="inline-flex items-center space-x-2 px-4 py-2 rounded-full glass-panel border border-primary/30 text-xs sm:text-sm font-medium">
-                        <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-ping"></span>
-                        <span class="gradient-text font-semibold">Disponible pour de nouveaux projets & opportunités</span>
-                    </div>
-
-                    <div class="space-y-4">
-                        <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-[1.1]">
-                            Jonathan <span class="gradient-text">Tshimbalanga</span>
-                        </h1>
-                        <h2 class="text-xl sm:text-2xl lg:text-3xl font-semibold text-slate-700 dark:text-slate-300 font-mono">
-                            AI Software Engineer / Backend Developer
-                        </h2>
-                    </div>
-
-                    <p class="text-base sm:text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
-                        Je construis des applications modernes, des systèmes backend robustes et j'explore les possibilités infinies offertes par l'intelligence artificielle pour résoudre des problèmes complexes.
-                    </p>
-
-                    <!-- Tech Badge Pills -->
-                    <div class="flex flex-wrap items-center justify-center lg:justify-start gap-2 pt-1">
-                        <span class="px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-xs font-mono text-primary flex items-center space-x-1.5"><i class="fa-brands fa-python"></i><span>Python</span></span>
-                        <span class="px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-xs font-mono text-emerald-400 flex items-center space-x-1.5"><i class="fa-solid fa-server"></i><span>Django</span></span>
-                        <span class="px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-xs font-mono text-secondary flex items-center space-x-1.5"><i class="fa-solid fa-brain"></i><span>AI & LLMs</span></span>
-                        <span class="px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-xs font-mono text-yellow-400 flex items-center space-x-1.5"><i class="fa-solid fa-database"></i><span>Backend</span></span>
-                    </div>
-
-                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
-                        <a href="#projects" class="w-full sm:w-auto px-8 py-4 rounded-xl font-semibold text-white bg-gradient-to-r from-primary to-secondary hover:opacity-90 transition-all shadow-xl shadow-pink-500/25 flex items-center justify-center space-x-3 group">
-                            <span>Voir mes projets</span>
-                            <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
-                        </a>
-                        <a href="#contact" class="w-full sm:w-auto px-8 py-4 rounded-xl font-semibold glass-panel text-slate-800 dark:text-white hover:bg-white/10 transition-colors flex items-center justify-center space-x-2">
-                            <i class="fa-regular fa-envelope text-primary"></i>
-                            <span>Me contacter</span>
-                        </a>
-                    </div>
+    <div class="relative z-10 mx-auto flex min-h-[min(76vh,620px)] max-w-7xl items-center px-4 py-12 sm:px-6 lg:px-8">
+        <div class="grid w-full grid-cols-1 items-center gap-14 lg:grid-cols-12 lg:gap-8">
+            <div class="space-y-6 text-center lg:col-span-7 lg:text-left">
+                <div class="inline-flex items-center gap-3 rounded-full border border-primary/30 bg-slate-950/60 px-4 py-2 text-xs font-medium text-slate-200 shadow-glow-magenta sm:text-sm">
+                    <span class="h-2.5 w-2.5 rounded-full bg-emerald-400"></span>
+                    <span>Disponible pour de nouveaux projets & opportunités</span>
                 </div>
 
-                <!-- Hero Right Profile & Immersive Tech Visual -->
-                <div class="lg:col-span-5 flex justify-center relative">
-                    <!-- Floating Tech Card 1 (Top Left) -->
-                    <div class="absolute -top-6 -left-4 sm:-left-8 glass-panel px-4 py-3 rounded-2xl shadow-xl z-20 animate-float hidden sm:flex items-center space-x-3 border border-pink-500/30">
-                        <div class="w-8 h-8 rounded-xl bg-primary/20 text-primary flex items-center justify-center text-sm">
-                            <i class="fa-solid fa-code"></i>
-                        </div>
-                        <div>
-                            <div class="text-[10px] text-slate-400 font-mono">Architecture</div>
-                            <div class="text-xs font-bold text-slate-900 dark:text-white">Clean & Scalable</div>
+                <div class="space-y-1">
+                    <p class="text-2xl font-medium text-slate-300 sm:text-3xl">Bonjour, je suis</p>
+                    <h1 class="font-extrabold leading-[0.98] tracking-tight text-white">
+                        <span class="block text-5xl sm:text-6xl xl:text-7xl">Jonathan</span>
+                        <span class="gradient-text block text-5xl sm:text-6xl xl:text-7xl">Tshimbalanga</span>
+                    </h1>
+                </div>
+
+                <h2 class="text-lg font-semibold text-slate-200 sm:text-2xl">AI Software Engineer / Backend Developer</h2>
+                <p class="mx-auto max-w-2xl text-sm leading-relaxed text-slate-400 sm:text-base lg:mx-0">
+                    Je construis des applications modernes, des systèmes backend robustes et j'explore les possibilités de l'intelligence artificielle pour résoudre des problèmes complexes.
+                </p>
+
+                <!-- Badges technologiques visibles dans la reference. -->
+                <div class="flex flex-wrap items-center justify-center gap-2 pt-1 lg:justify-start">
+                    <span class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-slate-900/80 px-3 py-2 text-xs text-slate-200"><i class="fa-brands fa-python text-yellow-400"></i>Python</span>
+                    <span class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-slate-900/80 px-3 py-2 text-xs text-slate-200"><i class="fa-solid fa-server text-emerald-400"></i>Django</span>
+                    <span class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-slate-900/80 px-3 py-2 text-xs text-slate-200"><i class="fa-solid fa-database text-sky-400"></i>PostgreSQL</span>
+                    <span class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-slate-900/80 px-3 py-2 text-xs text-slate-200"><i class="fa-solid fa-brain text-violet-400"></i>AI & LLMs</span>
+                    <span class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-slate-900/80 px-3 py-2 text-xs text-slate-200"><i class="fa-brands fa-docker text-sky-400"></i>Docker</span>
+                    <span class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-slate-900/80 px-3 py-2 text-xs text-slate-200"><i class="fa-brands fa-github text-white"></i>Git & GitHub</span>
+                </div>
+
+                <div class="flex flex-col justify-center gap-3 pt-2 sm:flex-row lg:justify-start">
+                    <a href="#projects" class="inline-flex items-center justify-center gap-3 rounded-xl bg-gradient-to-r from-primary via-violet-500 to-secondary px-6 py-3.5 font-semibold text-white shadow-glow-magenta transition-transform hover:-translate-y-0.5">
+                        <i class="fa-solid fa-code"></i><span>Voir mes projets</span>
+                    </a>
+                    <a href="#parcours" class="inline-flex items-center justify-center gap-3 rounded-xl border border-secondary/40 bg-slate-950/50 px-6 py-3.5 font-semibold text-slate-100 transition-colors hover:border-primary/70 hover:bg-white/5">
+                        <i class="fa-solid fa-arrow-down text-secondary"></i><span>Découvrir mon parcours</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="relative mx-auto flex min-h-[390px] w-full max-w-xl items-center justify-center gap-4 lg:col-span-5 lg:min-h-[430px] xl:gap-5">
+                <div class="relative isolate shrink-0">
+                    <!-- Panneaux inclines pour reprendre les couches lumineuses de la reference. -->
+                    <div class="absolute left-1/2 top-1/2 h-[330px] w-[230px] -translate-x-[42%] -translate-y-1/2 rotate-[-8deg] rounded-[2rem] border border-secondary/60 bg-gradient-to-br from-secondary/50 via-violet-700/70 to-primary/70 shadow-glow-blue sm:h-[370px] sm:w-[260px]"></div>
+                    <div class="absolute left-1/2 top-1/2 h-[330px] w-[230px] -translate-x-[58%] -translate-y-1/2 rotate-[7deg] rounded-[2rem] border border-primary/70 bg-gradient-to-br from-primary/70 via-violet-700/80 to-secondary/60 shadow-glow-magenta sm:h-[370px] sm:w-[260px]"></div>
+
+                    <article class="profile-card relative z-10 h-[350px] w-[246px] overflow-hidden rounded-[1.8rem] border border-secondary/70 bg-slate-950 shadow-glow-blue sm:h-[390px] sm:w-[276px]">
+                    <img src="{% static 'portfolio/images/Jonathan.png' %}" alt="Portrait de Jonathan Tshimbalanga" class="absolute inset-0 h-full w-full object-cover object-top">
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#030817] via-[#030817]/20 to-transparent"></div>
+                    <div class="absolute inset-x-0 bottom-0 space-y-2 p-4 sm:p-5">
+                        <h3 class="text-base font-bold text-white sm:text-lg"><span class="block">Jonathan</span><span class="block">Tshimbalanga</span></h3>
+                        <p class="text-sm font-medium text-primary">AI Software Engineer</p>
+                        <div class="inline-flex items-center gap-2 rounded-full border border-secondary/30 bg-slate-950/70 px-3 py-1.5 text-xs text-slate-200">
+                            <i class="fa-solid fa-location-dot text-violet-300"></i><span>[Paris, France]</span>
                         </div>
                     </div>
+                    </article>
+                </div>
 
-                    <!-- Floating Tech Card 2 (Bottom Right) -->
-                    <div class="absolute -bottom-6 -right-4 sm:-right-8 glass-panel px-4 py-3 rounded-2xl shadow-xl z-20 animate-float-slow hidden sm:flex items-center space-x-3 border border-blue-500/30">
-                        <div class="w-8 h-8 rounded-xl bg-secondary/20 text-secondary flex items-center justify-center text-sm">
-                            <i class="fa-solid fa-brain"></i>
-                        </div>
-                        <div>
-                            <div class="text-[10px] text-slate-400 font-mono">PyTorch / RAG</div>
-                            <div class="text-xs font-bold text-slate-900 dark:text-white">Neural Models Active</div>
-                        </div>
+                <div class="absolute inset-x-0 -bottom-1 grid grid-cols-3 gap-2 sm:hidden">
+                    <span class="rounded-lg border border-primary/30 bg-slate-950/90 px-2 py-2 text-center text-[10px] text-slate-200"><i class="fa-solid fa-code mr-1 text-primary"></i>Clean</span>
+                    <span class="rounded-lg border border-violet-400/30 bg-slate-950/90 px-2 py-2 text-center text-[10px] text-slate-200"><i class="fa-solid fa-brain mr-1 text-violet-400"></i>IA</span>
+                    <span class="rounded-lg border border-secondary/30 bg-slate-950/90 px-2 py-2 text-center text-[10px] text-slate-200"><i class="fa-solid fa-bolt mr-1 text-amber-300"></i>Rapide</span>
+                </div>
+
+                <!-- Encarts de competences flottants sur grand ecran. -->
+                <div class="hidden w-40 shrink-0 flex-col gap-4 xl:flex">
+                    <div class="glass-panel flex items-center gap-3 rounded-2xl border border-primary/30 p-3 shadow-glow-magenta">
+                        <i class="fa-solid fa-code text-xl text-primary"></i><span class="text-xs font-semibold text-white">Clean & Scalable<br><span class="font-normal text-slate-400">Architecture</span></span>
                     </div>
-
-                    <!-- Main Profile Photo Container with Glowing Halo -->
-                    <div class="relative group">
-                        <!-- Outer Glow Halo -->
-                        <div class="absolute -inset-3 bg-gradient-to-r from-primary to-secondary rounded-3xl blur-xl opacity-50 group-hover:opacity-80 transition duration-500 animate-glow"></div>
-                        
-                        <!-- Card Wrapper -->
-                        <div class="relative w-72 h-80 sm:w-80 sm:h-96 rounded-3xl glass-panel p-3 shadow-2xl overflow-hidden border border-white/20">
-                            <div class="w-full h-full rounded-2xl bg-gradient-to-br from-primary/20 via-slate-900 to-secondary/20 flex flex-col items-center justify-center p-6 text-center relative overflow-hidden">
-                                <!-- Background Abstract Grid pattern -->
-                                <div class="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none"></div>
-
-                                <!-- Profile Photo / Placeholder [PROFILE_PHOTO] -->
-                                <div class="relative w-36 h-36 sm:w-40 sm:h-40 rounded-2xl overflow-hidden shadow-2xl mb-4 border-2 border-primary/50 group-hover:scale-105 transition-transform duration-500">
-                                    <img src="{% static 'portfolio/images/Jonathan.png' %}" alt="Photo de profil de Jonathan Tshimbalanga" class="w-full h-full object-cover">
-                                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
-                                </div>
-
-                                <h3 class="text-xl font-bold text-white tracking-wide">Jonathan Tshimbalanga</h3>
-                                <p class="text-xs text-primary font-mono mt-1">AI Software Engineer</p>
-                                
-                                <div class="mt-4 inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-black/50 border border-white/10 text-xs text-emerald-400 font-mono">
-                                    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-                                    <span>[Paris, France]</span>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="glass-panel flex items-center gap-3 rounded-2xl border border-violet-400/30 p-3">
+                        <i class="fa-solid fa-brain text-xl text-violet-400"></i><span class="text-xs font-semibold text-white">IA<br><span class="font-normal text-slate-400">RAG · Agents · LLMs</span></span>
+                    </div>
+                    <div class="glass-panel flex items-center gap-3 rounded-2xl border border-secondary/30 p-3">
+                        <i class="fa-solid fa-bolt text-xl text-amber-300"></i><span class="text-xs font-semibold text-white">Performance<br><span class="font-normal text-slate-400">Optimized & Secure</span></span>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+
+    <div class="relative z-10 border-y border-white/10 bg-[#050a1b]/90">
+        <div class="mx-auto grid max-w-7xl grid-cols-2 gap-4 px-4 py-5 sm:px-6 md:grid-cols-3 lg:grid-cols-6 lg:items-center lg:gap-5 lg:px-8">
+            <div class="col-span-2 flex items-center gap-3 border-b border-white/10 pb-3 md:col-span-3 lg:col-span-1 lg:border-b-0 lg:border-r lg:pb-0 lg:pr-4">
+                <i class="fa-regular fa-lightbulb text-xl text-amber-300"></i><span class="text-sm font-bold text-white">Ce que j'apporte</span>
+            </div>
+            <div class="text-xs text-slate-300"><i class="fa-solid fa-circle-check mr-2 text-emerald-400"></i>Une hiérarchie visuelle claire</div>
+            <div class="text-xs text-slate-300"><i class="fa-solid fa-circle-check mr-2 text-emerald-400"></i>Backend fiable et lisible</div>
+            <div class="text-xs text-slate-300"><i class="fa-solid fa-circle-check mr-2 text-emerald-400"></i>IA pensée pour l'usage</div>
+            <div class="text-xs text-slate-300"><i class="fa-solid fa-circle-check mr-2 text-emerald-400"></i>Interfaces adaptées aux écrans</div>
+            <div class="text-xs text-slate-300"><i class="fa-solid fa-circle-check mr-2 text-emerald-400"></i>Une identité visuelle cohérente</div>
+        </div>
+    </div>
+</section>

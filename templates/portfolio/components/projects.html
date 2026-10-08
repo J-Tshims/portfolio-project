@@ -13,7 +13,7 @@
 
             <!-- Project Filter Buttons -->
             <div class="flex flex-wrap items-center justify-center gap-2 mb-12">
-                <button class="filter-btn px-5 py-2 rounded-xl text-sm font-medium bg-gradient-to-r from-primary to-secondary text-white shadow-lg shadow-pink-500/20 transition-all" data-filter="all">All</button>
+                <button class="filter-btn px-5 py-2 rounded-xl text-sm font-medium bg-gradient-to-r from-primary via-violet-500 to-secondary text-white shadow-lg shadow-fuchsia-500/20 transition-all" data-filter="all">All</button>
                 <button class="filter-btn px-5 py-2 rounded-xl text-sm font-medium glass-panel text-slate-700 dark:text-slate-300 hover:text-primary transition-all" data-filter="web">Web</button>
                 <button class="filter-btn px-5 py-2 rounded-xl text-sm font-medium glass-panel text-slate-700 dark:text-slate-300 hover:text-primary transition-all" data-filter="backend">Backend</button>
                 <button class="filter-btn px-5 py-2 rounded-xl text-sm font-medium glass-panel text-slate-700 dark:text-slate-300 hover:text-primary transition-all" data-filter="ai">AI</button>
@@ -34,10 +34,10 @@
                             Le code en dur est supprimé pour que chaque carte ait sa vraie couleur et son vrai groupe.
                         -->
                         <div class="project-card glass-panel rounded-2xl overflow-hidden group shadow-xl border border-white/10 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1.5
-                            {% if project.category == 'ai' %} hover:border-primary/50 {% elif project.category == 'backend' %} hover:border-secondary/50 {% else %} hover:border-emerald-500/50 {% endif %}
+                            {% if project.category == 'ai' %} hover:border-primary/50 {% elif project.category == 'backend' %} hover:border-violet-400/60 {% else %} hover:border-secondary/50 {% endif %}
                             " data-category="{{ project.category }}">
                             <div class="relative h-56 bg-gradient-to-br flex items-center justify-center overflow-hidden
-                                {% if project.category == 'ai' %} from-primary/30 via-slate-900 to-secondary/30 {% elif project.category == 'backend' %} from-secondary/30 via-slate-900 to-primary/30 {% else %} from-emerald-500/30 via-slate-900 to-secondary/30 {% endif %}">
+                                {% if project.category == 'ai' %} from-primary/30 via-slate-900 to-secondary/30 {% elif project.category == 'backend' %} from-violet-500/30 via-slate-900 to-primary/30 {% else %} from-secondary/30 via-slate-900 to-violet-500/30 {% endif %}">
                                 <div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition-colors"></div>
 
                                 <!--
@@ -45,7 +45,7 @@
                                     Si ce champ est vide, Django utilise 'fa-code' comme fallback.
                                 -->
                                 <div class="w-16 h-16 rounded-2xl bg-black/60 backdrop-blur-md flex items-center justify-center text-2xl shadow-xl z-10 group-hover:scale-110 transition-transform
-                                    {% if project.category == 'ai' %} text-primary {% elif project.category == 'backend' %} text-secondary {% else %} text-emerald-400 {% endif %}">
+                                    {% if project.category == 'ai' %} text-primary {% elif project.category == 'backend' %} text-violet-300 {% else %} text-secondary {% endif %}">
                                     <i class="fa-solid {{ project.icon|default:'fa-code' }}"></i>
                                 </div>
 
@@ -53,7 +53,7 @@
                                     Le libellé peut être dynamique selon la catégorie pour refléter le bon type de projet.
                                 -->
                                 <div class="absolute top-4 right-4 bg-black/60 backdrop-blur-md px-3 py-1 rounded-full text-xs font-mono border z-10
-                                    {% if project.category == 'ai' %} text-primary border-primary/30 {% elif project.category == 'backend' %} text-secondary border-secondary/30 {% else %} text-emerald-400 border-emerald-500/30 {% endif %}">
+                                    {% if project.category == 'ai' %} text-primary border-primary/30 {% elif project.category == 'backend' %} text-violet-300 border-violet-400/30 {% else %} text-secondary border-secondary/30 {% endif %}">
                                     {{ project.get_category_display }}
                                 </div>
                             </div>
@@ -61,7 +61,7 @@
                                 <div class="space-y-3">
                                     <!-- On affiche le titre réel du projet enregistré dans l'admin. -->
                                     <h3 class="text-2xl font-bold text-slate-900 dark:text-white
-                                        {% if project.category == 'ai' %} group-hover:text-primary {% elif project.category == 'backend' %} group-hover:text-secondary {% else %} group-hover:text-emerald-400 {% endif %} transition-colors">
+                                        {% if project.category == 'ai' %} group-hover:text-primary {% elif project.category == 'backend' %} group-hover:text-violet-300 {% else %} group-hover:text-secondary {% endif %} transition-colors">
                                         {{ project.title }}
                                     </h3>
 
@@ -89,7 +89,7 @@
                                     {% endif %}
 
                                     {% if project.link %}
-                                        <a href="{{ project.link }}" target="_blank" rel="noopener noreferrer" class="flex-1 py-2.5 rounded-xl bg-gradient-to-r from-primary to-secondary text-center text-sm font-medium text-white hover:opacity-90 transition-opacity shadow-md shadow-pink-500/20 flex items-center justify-center space-x-2">
+                                        <a href="{{ project.link }}" target="_blank" rel="noopener noreferrer" class="flex-1 py-2.5 rounded-xl bg-gradient-to-r from-primary via-violet-500 to-secondary text-center text-sm font-medium text-white hover:opacity-90 transition-opacity shadow-md shadow-fuchsia-500/20 flex items-center justify-center space-x-2">
                                             <i class="fa-solid fa-arrow-up-right-from-square"></i>
                                             <span>Demo</span>
                                         </a>
