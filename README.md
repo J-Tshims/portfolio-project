@@ -14,7 +14,7 @@ Projet personnel pour construire un portfolio avec Django et apprendre progressi
 - Django est configure pour trouver les templates globaux et les fichiers statiques; `base.html` et `theme.js` ont ete verifies avec les outils Django.
 - Le formulaire de contact est une maquette frontend : son message n'est pas encore envoye ni enregistre.
 - Les migrations integrees de Django pour `admin`, `auth`, `contenttypes` et `sessions` ont ete appliquees avec succes.
-- Le depot local est sur `master`, qui suit `origin/master`. Des changements de code et des migrations ne sont pas encore commités.
+- Le depot local est sur `master`, propre et synchronisé avec `origin/master`. Le commit `929d59d` contenant les modèles, migrations, projets dynamiques, identité et photo de profil a été poussé.
 - La sortie de `git status --short --ignored` a confirme que `.venv/`, `db.sqlite3` et les caches Python sont ignores.
 - Le projet utilise SQLite en local. La version de Django constatee dans l'environnement lors de la redaction est `6.0.3`.
 
@@ -53,12 +53,13 @@ Le panneau d'administration est disponible sur `http://127.0.0.1:8000/admin/`. L
 - [x] Initialiser le depot Git local et preparer les fichiers non ignores.
 - [x] Verifier que `.venv/`, `db.sqlite3` et les caches sont exclus de Git.
 - [x] Creer le commit local initial.
-- [ ] Vérifier et committer les changements locaux, y compris les migrations, avant de les pousser.
+- [x] Vérifier, committer et pousser les changements locaux, y compris les migrations.
 - [ ] Relier le depot à un hébergeur web et préparer les réglages de production avant de partager une URL publique.
 - [x] Créer les modèles Project, Skill, Service et Experience et les enregistrer dans l'administration Django.
 - [ ] Relier les sections compétences, services et parcours aux données de l'administration.
 - [ ] Remplacer les identités, coordonnées et liens d'exemple par les informations réelles.
-- [ ] Ajouter une photo de profil et vérifier son affichage.
+- [x] Ajouter la photo de profil et vérifier que Django la sert.
+- [ ] Vérifier visuellement la photo de profil dans le navigateur.
 - [ ] Connecter le formulaire de contact au backend avec validation et protection CSRF.
 - [ ] Ecrire des tests pour la page, les contenus et le formulaire.
 

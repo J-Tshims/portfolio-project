@@ -31,7 +31,7 @@ La section projets lit les objets `Project` depuis la base. Il reste à ajouter 
 
 ## Etape en cours : préparer la publication
 
-Le dépôt est sur `master` et suit `origin/master`. Des changements de code et trois fichiers de migration sont encore locaux et non commités. Les migrations `portfolio` 0001 à 0004 sont appliquées.
+Le dépôt est sur `master`, propre et synchronisé avec `origin/master`. Le commit `929d59d` (`Add dynamic portfolio content and profile photo`) a été poussé. Les migrations `portfolio` 0001 à 0004 sont appliquées.
 
 `python manage.py check --deploy` signale six avertissements de sécurité, notamment `DEBUG=True`, `ALLOWED_HOSTS` vide et des protections HTTPS/cookies non activées. Il faut préparer les réglages de production et choisir un hébergeur avant de partager un lien public sur LinkedIn.
 
@@ -45,6 +45,6 @@ Ne pas modifier les fichiers à la place de l'utilisateur : il apprend en réali
 2. Ajouter les vrais projets et contenus dans l'admin, puis rendre les sections compétences, services et parcours dynamiques.
 3. Finir et tester le formulaire de contact.
 4. Préparer l'hébergement, les réglages de sécurité, les fichiers statiques et les données de production.
-5. Relire le portfolio en mobile et ordinateur, exécuter les tests, committer puis déployer.
+5. Relire le portfolio en mobile et ordinateur, exécuter les tests, puis préparer le déploiement.
 
 Respecter `.github/agents/backend.md`. Ne pas modifier les fichiers à la place de l'utilisateur; expliquer et attendre ses résultats.
