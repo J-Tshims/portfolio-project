@@ -202,6 +202,13 @@
         #mobileMenuBtn[aria-expanded="true"] [data-menu-line="bottom"] {
             transform: translateY(-50%) rotate(-45deg);
         }
+
+        /* Laisser de l'espace sous la barre fixe sur les petits écrans. */
+        @media (max-width: 768px) {
+            #hero .hero-availability {
+                margin-top: 1rem;
+            }
+        }
     </style>
 </head>
 <body class="bg-darkbg text-slate-100 dark bg-mesh min-h-screen selection:bg-fuchsia-500 selection:text-white">
