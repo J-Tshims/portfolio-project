@@ -23,31 +23,44 @@
                 <a href="#contact" class="nav-link text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary transition-colors">Contact</a>
             </nav>
 
-            <!-- Actions (Theme Toggle & CTA) -->
+            <!-- Sélecteur de langue et action principale -->
             <div class="hidden md:flex items-center space-x-4">
-                <button id="themeToggle" aria-label="Toggle Theme" class="w-10 h-10 rounded-xl glass-panel flex items-center justify-center text-slate-700 dark:text-yellow-400 hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors">
-                    <i class="fa-solid fa-sun hidden dark:inline-block"></i>
-                    <i class="fa-solid fa-moon inline-block dark:hidden"></i>
-                </button>
+                <div class="inline-flex items-center gap-1 rounded-xl border border-white/10 bg-slate-950/70 p-1 text-xs font-semibold shadow-[0_0_14px_rgba(217,70,239,0.12)]" role="group" aria-label="Choisir la langue">
+                    <svg class="ml-1.5 h-4 w-4 text-secondary drop-shadow-[0_0_5px_rgba(22,139,255,0.7)]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="12" cy="12" r="9"></circle>
+                        <path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"></path>
+                    </svg>
+                    <button type="button" data-language="fr" aria-pressed="true" class="rounded-lg bg-white/10 px-2 py-1.5 text-white transition-colors">FR</button>
+                    <button type="button" data-language="en" aria-pressed="false" class="rounded-lg px-2 py-1.5 text-slate-400 transition-colors hover:text-white">EN</button>
+                </div>
                 <a href="#contact" class="px-5 py-2.5 rounded-xl font-medium text-white bg-gradient-to-r from-primary via-violet-500 to-secondary hover:opacity-90 transition-opacity shadow-lg shadow-fuchsia-500/25">
                     Me contacter
                 </a>
             </div>
 
-            <!-- Mobile Menu Button -->
+            <!-- Commandes mobiles -->
             <div class="flex items-center space-x-3 md:hidden">
-                <button id="themeToggleMobile" aria-label="Toggle Theme" class="w-10 h-10 rounded-xl glass-panel flex items-center justify-center text-slate-700 dark:text-yellow-400">
-                    <i class="fa-solid fa-sun hidden dark:inline-block"></i>
-                    <i class="fa-solid fa-moon inline-block dark:hidden"></i>
-                </button>
-                <button id="mobileMenuBtn" aria-label="Open Menu" class="w-10 h-10 rounded-xl glass-panel flex items-center justify-center text-slate-700 dark:text-white">
-                    <i class="fa-solid fa-bars text-lg"></i>
+                <div class="inline-flex items-center gap-1 rounded-xl border border-white/10 bg-slate-950/70 p-1 text-xs font-semibold shadow-[0_0_14px_rgba(217,70,239,0.12)]" role="group" aria-label="Choisir la langue">
+                    <svg class="ml-1 h-4 w-4 text-secondary drop-shadow-[0_0_5px_rgba(22,139,255,0.7)]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="12" cy="12" r="9"></circle>
+                        <path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"></path>
+                    </svg>
+                    <button type="button" data-language="fr" aria-pressed="true" class="rounded-lg bg-white/10 px-2 py-1.5 text-white transition-colors">FR</button>
+                    <button type="button" data-language="en" aria-pressed="false" class="rounded-lg px-2 py-1.5 text-slate-400 transition-colors hover:text-white">EN</button>
+                </div>
+                <button id="mobileMenuBtn" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mobileMenu" class="w-10 h-10 rounded-xl glass-panel flex items-center justify-center text-slate-700 dark:text-white">
+                    <span class="relative block h-5 w-5" aria-hidden="true">
+                        <span data-menu-line="top" class="absolute left-0 top-1/2 h-0.5 w-5 -translate-y-2 rounded bg-current transition-all duration-300 ease-in-out"></span>
+                        <span data-menu-line="middle" class="absolute left-0 top-1/2 h-0.5 w-5 -translate-y-0.5 rounded bg-current transition-all duration-300 ease-in-out"></span>
+                        <span data-menu-line="bottom" class="absolute left-0 top-1/2 h-0.5 w-5 translate-y-1 rounded bg-current transition-all duration-300 ease-in-out"></span>
+                    </span>
                 </button>
             </div>
         </div>
 
         <!-- Mobile Dropdown Menu -->
-        <div id="mobileMenu" class="hidden md:hidden glass-panel border-t border-white/10 px-6 py-6 space-y-4">
+        <div id="mobileMenu" aria-hidden="true" inert class="glass-panel border-t border-white/10 px-6 md:hidden">
+            <nav class="space-y-4">
             <a href="#hero" class="block text-slate-700 dark:text-slate-200 font-medium py-2 mobile-link">Accueil</a>
             <a href="#about" class="block text-slate-700 dark:text-slate-200 font-medium py-2 mobile-link">À propos</a>
             <a href="#skills" class="block text-slate-700 dark:text-slate-200 font-medium py-2 mobile-link">Compétences</a>
@@ -56,9 +69,10 @@
             <a href="#services" class="block text-slate-700 dark:text-slate-200 font-medium py-2 mobile-link">Services</a>
             <a href="#contact" class="block text-slate-700 dark:text-slate-200 font-medium py-2 mobile-link">Contact</a>
             <div class="pt-2">
-                <a href="#contact" class="w-full block text-center py-3 rounded-xl font-medium text-white bg-gradient-to-r from-primary via-violet-500 to-secondary shadow-lg shadow-fuchsia-500/25">
+                <a href="#contact" class="mobile-link w-full block text-center py-3 rounded-xl font-medium text-white bg-gradient-to-r from-primary via-violet-500 to-secondary shadow-lg shadow-fuchsia-500/25">
                     Me contacter
                 </a>
             </div>
+            </nav>
         </div>
     </header>

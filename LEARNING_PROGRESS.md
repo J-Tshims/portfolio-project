@@ -25,6 +25,7 @@ Apprendre Django en construisant ce portfolio, une étape à la fois. L'utilisat
 - La photo `static/portfolio/images/Jonathan.png` est reliée au cadre du profil. Le rendu Django contient son chemin statique et `python manage.py check` réussit; vérifier encore l'apparence dans le navigateur. Les coordonnées et liens sociaux sont aussi à personnaliser.
 - Le hero reprend la composition de la référence et la palette bleu nuit, magenta, violet et bleu électrique; les sections suivantes gardent leur disposition avec des couleurs harmonisées. Dans la carte profil, le prénom et le nom apparaissent maintenant sur deux lignes.
 - Les logos affichent maintenant JT et les mentions de localisation du hero, de la présentation et du contact indiquent Kinshasa, RDC. Les espacements du hero ont été réduits; les deux boutons restent visibles à 390x667 et 1365x768 dans le navigateur, et `python manage.py check` ne signale aucune erreur.
+- Le header contient maintenant un sélecteur FR/EN avec globe SVG et un menu mobile animé avec icône hamburger qui se transforme en croix. Le clic synchronise les deux sélecteurs et le menu s'ouvre/se ferme en 0,3 s; le contenu du site reste français. Vérifié dans le navigateur mobile et avec `python manage.py check`.
 - Les captures du navigateur en bureau et mobile ont été vérifiées; le nom tient sur une ligne dans la carte photo et aucun débordement horizontal n'est présent.
 - Le formulaire de contact reste une maquette frontend qui affiche un toast local; aucun message n'est envoyé ni enregistré.
 
