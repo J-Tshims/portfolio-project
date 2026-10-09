@@ -3,25 +3,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const menuButton = document.getElementById('mobileMenuBtn');
     const mobileMenu = document.getElementById('mobileMenu');
 
-    document.querySelectorAll('[data-language]').forEach((button) => {
-        button.addEventListener('click', () => {
-            const selectedLanguage = button.dataset.language;
-
-            document.querySelectorAll('[data-language]').forEach((languageButton) => {
-                const isSelected = languageButton.dataset.language === selectedLanguage;
-                languageButton.setAttribute('aria-pressed', String(isSelected));
-                languageButton.classList.toggle('bg-white/10', isSelected);
-                languageButton.classList.toggle('text-white', isSelected);
-                languageButton.classList.toggle('text-slate-400', !isSelected);
-            });
-        });
-    });
-
     if (!menuButton || !mobileMenu) return;
 
     function setMenuOpen(isOpen) {
+        const isEnglish = document.documentElement.lang === 'en';
         menuButton.setAttribute('aria-expanded', String(isOpen));
-        menuButton.setAttribute('aria-label', isOpen ? 'Fermer le menu' : 'Ouvrir le menu');
+        menuButton.setAttribute('aria-label', isOpen
+            ? (isEnglish ? 'Close menu' : 'Fermer le menu')
+            : (isEnglish ? 'Open menu' : 'Ouvrir le menu'));
         mobileMenu.setAttribute('aria-hidden', String(!isOpen));
         mobileMenu.inert = !isOpen;
         mobileMenu.classList.toggle('is-open', isOpen);

@@ -2,11 +2,11 @@
 <section id="contact" class="py-24 bg-slate-900/40 relative reveal">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center space-y-4 mb-16">
-                <span class="text-secondary font-mono text-sm uppercase tracking-wider">// ENTRONS EN CONTACT</span>
+                <span class="text-secondary font-mono text-sm uppercase tracking-wider" data-i18n="contact_eyebrow">// ENTRONS EN CONTACT</span>
                 <h2 class="text-3xl sm:text-5xl font-extrabold text-slate-900 dark:text-white">
-                    Travaillons ensemble
+                    <span data-i18n="contact_title">Travaillons ensemble</span>
                 </h2>
-                <p class="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
+                <p class="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto" data-i18n="contact_subtitle">
                     Une opportunité, une question ou un projet ? Envoyez-moi un message !
                 </p>
             </div>
@@ -15,9 +15,9 @@
                 <!-- Contact Info (Left) -->
                 <div class="lg:col-span-5 space-y-8">
                     <div class="glass-panel p-8 rounded-2xl space-y-6 shadow-xl">
-                        <h3 class="text-2xl font-bold text-slate-900 dark:text-white">Coordonnées</h3>
-                        <p class="text-slate-600 dark:text-slate-400 text-sm">
-                            Je suis à l'écoute de toute proposition de collaboration ou d'échange autour de la tech et de l'IA.
+                        <h3 class="text-2xl font-bold text-slate-900 dark:text-white" data-i18n="contact_details">Coordonnées</h3>
+                        <p class="text-slate-600 dark:text-slate-400 text-sm" data-i18n="contact_intro">
+                            Je suis à l'écoute de toute proposition de collaboration ou d'échange autour de la tech et de l'AI.
                         </p>
 
                         <div class="space-y-4 pt-2">
@@ -36,15 +36,15 @@
                                     <i class="fa-solid fa-location-dot"></i>
                                 </div>
                                 <div>
-                                    <div class="text-xs text-slate-400">Localisation</div>
-                                    <div class="font-semibold text-slate-900 dark:text-white">Kinshasa, RDC</div>
+                                    <div class="text-xs text-slate-400" data-i18n="contact_location_label">Localisation</div>
+                                    <div class="font-semibold text-slate-900 dark:text-white" data-i18n="location">Kinshasa, DRC</div>
                                 </div>
                             </div>
                         </div>
 
                         <!-- Social Links -->
                         <div class="pt-4 border-t border-white/10">
-                            <div class="text-xs text-slate-400 mb-4">Réseaux Sociaux</div>
+                            <div class="text-xs text-slate-400 mb-4" data-i18n="contact_social">Réseaux Sociaux</div>
                             <div class="flex items-center space-x-4">
                                 <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-xl glass-panel flex items-center justify-center text-slate-700 dark:text-white hover:text-primary transition-colors">
                                     <i class="fa-brands fa-github text-lg"></i>
@@ -65,24 +65,24 @@
                     <form id="contactForm" class="glass-panel p-8 rounded-2xl space-y-6 shadow-xl">
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                             <div class="space-y-2">
-                                <label for="name" class="block text-xs font-mono uppercase text-slate-400">Nom</label>
-                                <input type="text" id="name" required class="w-full px-4 py-3 rounded-xl bg-black/20 border border-white/10 text-slate-900 dark:text-white focus:outline-none focus:border-primary transition-colors" placeholder="Votre nom">
+                                <label for="name" class="block text-xs font-mono uppercase text-slate-400" data-i18n="form_name">Nom</label>
+                                <input type="text" id="name" required class="w-full px-4 py-3 rounded-xl bg-black/20 border border-white/10 text-slate-900 dark:text-white focus:outline-none focus:border-primary transition-colors" placeholder="Votre nom" data-i18n-placeholder="form_name_placeholder">
                             </div>
                             <div class="space-y-2">
                                 <label for="email" class="block text-xs font-mono uppercase text-slate-400">Email</label>
-                                <input type="email" id="email" required class="w-full px-4 py-3 rounded-xl bg-black/20 border border-white/10 text-slate-900 dark:text-white focus:outline-none focus:border-primary transition-colors" placeholder="votre@email.com">
+                                <input type="email" id="email" required class="w-full px-4 py-3 rounded-xl bg-black/20 border border-white/10 text-slate-900 dark:text-white focus:outline-none focus:border-primary transition-colors" placeholder="votre@email.com" data-i18n-placeholder="form_email_placeholder">
                             </div>
                         </div>
                         <div class="space-y-2">
-                            <label for="subject" class="block text-xs font-mono uppercase text-slate-400">Sujet</label>
-                            <input type="text" id="subject" required class="w-full px-4 py-3 rounded-xl bg-black/20 border border-white/10 text-slate-900 dark:text-white focus:outline-none focus:border-primary transition-colors" placeholder="Sujet de votre message">
+                                <label for="subject" class="block text-xs font-mono uppercase text-slate-400" data-i18n="form_subject">Sujet</label>
+                                <input type="text" id="subject" required class="w-full px-4 py-3 rounded-xl bg-black/20 border border-white/10 text-slate-900 dark:text-white focus:outline-none focus:border-primary transition-colors" placeholder="Sujet de votre message" data-i18n-placeholder="form_subject_placeholder">
                         </div>
                         <div class="space-y-2">
-                            <label for="message" class="block text-xs font-mono uppercase text-slate-400">Message</label>
-                            <textarea id="message" rows="5" required class="w-full px-4 py-3 rounded-xl bg-black/20 border border-white/10 text-slate-900 dark:text-white focus:outline-none focus:border-primary transition-colors resize-none" placeholder="Votre message..."></textarea>
+                            <label for="message" class="block text-xs font-mono uppercase text-slate-400" data-i18n="form_message">Message</label>
+                            <textarea id="message" rows="5" required class="w-full px-4 py-3 rounded-xl bg-black/20 border border-white/10 text-slate-900 dark:text-white focus:outline-none focus:border-primary transition-colors resize-none" placeholder="Votre message..." data-i18n-placeholder="form_message_placeholder"></textarea>
                         </div>
                         <button type="submit" class="w-full py-4 rounded-xl font-semibold text-white bg-gradient-to-r from-primary via-violet-500 to-secondary hover:opacity-90 transition-opacity shadow-lg shadow-fuchsia-500/25 flex items-center justify-center space-x-2">
-                            <span>Envoyer le message</span>
+                            <span data-i18n="form_submit">Envoyer le message</span>
                             <i class="fa-solid fa-paper-plane"></i>
                         </button>
                     </form>

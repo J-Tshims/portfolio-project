@@ -11,7 +11,8 @@
     <!-- Scripts front-end separes par responsabilite. -->
     <script src="{% static 'portfolio/js/tailwind-config.js' %}"></script>
     <script src="{% static 'portfolio/js/theme.js' %}"></script>
-    <script src="{% static 'portfolio/js/navigation.js' %}?v=3"></script>
+    <script src="{% static 'portfolio/js/navigation.js' %}?v=4"></script>
+    <script src="{% static 'portfolio/js/language.js' %}?v=4"></script>
     <script src="{% static 'portfolio/js/project-filter.js' %}"></script>
     <script src="{% static 'portfolio/js/animations.js' %}"></script>
     <script src="{% static 'portfolio/js/contact-form.js' %}"></script>
@@ -232,8 +233,8 @@
             <i class="fa-solid fa-check"></i>
         </div>
         <div>
-            <div class="text-sm font-bold text-slate-900 dark:text-white">Message envoyé !</div>
-            <div class="text-xs text-slate-400">Merci, je vous répondrai très rapidement.</div>
+            <div class="text-sm font-bold text-slate-900 dark:text-white" data-i18n="toast_title">Message envoyé !</div>
+            <div class="text-xs text-slate-400" data-i18n="toast_message">Merci, je vous répondrai très rapidement.</div>
         </div>
     </div>
 </body>

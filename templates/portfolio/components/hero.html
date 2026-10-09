@@ -10,11 +10,11 @@
             <div class="space-y-3 text-center lg:col-span-7 lg:text-left">
                 <div class="hero-availability inline-flex items-center gap-3 rounded-full border border-primary/30 bg-slate-950/60 px-4 py-2 text-xs font-medium text-slate-200 shadow-glow-magenta sm:text-sm">
                     <span class="h-2.5 w-2.5 rounded-full bg-emerald-400"></span>
-                    <span>Disponible pour de nouveaux projets & opportunités</span>
+                    <span data-i18n="hero_available">Disponible pour de nouveaux projets & opportunités</span>
                 </div>
 
                 <div class="space-y-1">
-                    <p class="text-xl font-medium text-slate-300 sm:text-3xl">Bonjour, je suis</p>
+                    <p class="text-xl font-medium text-slate-300 sm:text-3xl" data-i18n="hero_greeting">Bonjour, je suis</p>
                     <h1 class="font-extrabold leading-[0.98] tracking-tight text-white">
                         <span class="block text-4xl sm:text-6xl xl:text-7xl">Jonathan</span>
                         <span class="gradient-text block text-4xl sm:text-6xl xl:text-7xl">Tshimbalanga</span>
@@ -22,7 +22,7 @@
                 </div>
 
                 <h2 class="text-lg font-semibold text-slate-200 sm:text-2xl">AI Software Engineer / Backend Developer</h2>
-                <p class="mx-auto max-w-2xl text-sm leading-relaxed text-slate-400 sm:text-base lg:mx-0">
+                <p class="mx-auto max-w-2xl text-sm leading-relaxed text-slate-400 sm:text-base lg:mx-0" data-i18n="hero_intro">
                     Je construis des applications modernes, des systèmes backend robustes et j'explore les possibilités de l'intelligence artificielle pour résoudre des problèmes complexes.
                 </p>
 
@@ -38,10 +38,10 @@
 
                 <div class="flex flex-col justify-center gap-3 pt-2 sm:flex-row lg:justify-start">
                     <a href="#projects" class="inline-flex items-center justify-center gap-3 rounded-xl bg-gradient-to-r from-primary via-violet-500 to-secondary px-6 py-3 font-semibold text-white shadow-glow-magenta transition-transform hover:-translate-y-0.5">
-                        <i class="fa-solid fa-code"></i><span>Voir mes projets</span>
+                        <i class="fa-solid fa-code"></i><span data-i18n="hero_projects_cta">Voir mes projets</span>
                     </a>
                     <a href="#parcours" class="inline-flex items-center justify-center gap-3 rounded-xl border border-secondary/40 bg-slate-950/50 px-6 py-3 font-semibold text-slate-100 transition-colors hover:border-primary/70 hover:bg-white/5">
-                        <i class="fa-solid fa-arrow-down text-secondary"></i><span>Découvrir mon parcours</span>
+                        <i class="fa-solid fa-arrow-down text-secondary"></i><span data-i18n="hero_journey_cta">Découvrir mon parcours</span>
                     </a>
                 </div>
             </div>
@@ -53,13 +53,13 @@
                     <div class="absolute left-1/2 top-1/2 h-[330px] w-[230px] -translate-x-[58%] -translate-y-1/2 rotate-[7deg] rounded-[2rem] border border-primary/70 bg-gradient-to-br from-primary/70 via-violet-700/80 to-secondary/60 shadow-glow-magenta sm:h-[370px] sm:w-[260px]"></div>
 
                     <article class="profile-card relative z-10 h-[350px] w-[246px] overflow-hidden rounded-[1.8rem] border border-secondary/70 bg-slate-950 shadow-glow-blue sm:h-[390px] sm:w-[276px]">
-                    <img src="{% static 'portfolio/images/Jonathan.png' %}" alt="Portrait de Jonathan Tshimbalanga" class="absolute inset-0 h-full w-full object-cover object-top">
+                    <img src="{% static 'portfolio/images/Jonathan.png' %}" alt="Portrait de Jonathan Tshimbalanga" data-i18n-alt="portrait_alt" class="absolute inset-0 h-full w-full object-cover object-top">
                     <div class="absolute inset-0 bg-gradient-to-t from-[#030817] via-[#030817]/20 to-transparent"></div>
                     <div class="absolute inset-x-0 bottom-0 space-y-2 p-4 sm:p-5">
                         <h3 class="text-base font-bold text-white sm:text-lg"><span class="block">Jonathan</span><span class="block">Tshimbalanga</span></h3>
                         <p class="text-sm font-medium text-primary">AI Software Engineer</p>
                         <div class="inline-flex items-center gap-2 rounded-full border border-secondary/30 bg-slate-950/70 px-3 py-1.5 text-xs text-slate-200">
-                            <i class="fa-solid fa-location-dot text-violet-300"></i><span>Kinshasa, RDC</span>
+                            <i class="fa-solid fa-location-dot text-violet-300"></i><span data-i18n="location">Kinshasa, RDC</span>
                         </div>
                     </div>
                     </article>
@@ -67,8 +67,8 @@
 
                 <div class="absolute inset-x-0 -bottom-1 grid grid-cols-3 gap-2 sm:hidden">
                     <span class="rounded-lg border border-primary/30 bg-slate-950/90 px-2 py-2 text-center text-[10px] text-slate-200"><i class="fa-solid fa-code mr-1 text-primary"></i>Clean</span>
-                    <span class="rounded-lg border border-violet-400/30 bg-slate-950/90 px-2 py-2 text-center text-[10px] text-slate-200"><i class="fa-solid fa-brain mr-1 text-violet-400"></i>IA</span>
-                    <span class="rounded-lg border border-secondary/30 bg-slate-950/90 px-2 py-2 text-center text-[10px] text-slate-200"><i class="fa-solid fa-bolt mr-1 text-amber-300"></i>Rapide</span>
+                    <span class="rounded-lg border border-violet-400/30 bg-slate-950/90 px-2 py-2 text-center text-[10px] text-slate-200"><i class="fa-solid fa-brain mr-1 text-violet-400"></i>AI</span>
+                    <span class="rounded-lg border border-secondary/30 bg-slate-950/90 px-2 py-2 text-center text-[10px] text-slate-200"><i class="fa-solid fa-bolt mr-1 text-amber-300"></i><span data-i18n="hero_fast">Rapide</span></span>
                 </div>
 
                 <!-- Encarts de competences flottants sur grand ecran. -->
@@ -77,7 +77,7 @@
                         <i class="fa-solid fa-code text-xl text-primary"></i><span class="text-xs font-semibold text-white">Clean & Scalable<br><span class="font-normal text-slate-400">Architecture</span></span>
                     </div>
                     <div class="glass-panel flex items-center gap-3 rounded-2xl border border-violet-400/30 p-3">
-                        <i class="fa-solid fa-brain text-xl text-violet-400"></i><span class="text-xs font-semibold text-white">IA<br><span class="font-normal text-slate-400">RAG · Agents · LLMs</span></span>
+                        <i class="fa-solid fa-brain text-xl text-violet-400"></i><span class="text-xs font-semibold text-white">AI<br><span class="font-normal text-slate-400">RAG · Agents · LLMs</span></span>
                     </div>
                     <div class="glass-panel flex items-center gap-3 rounded-2xl border border-secondary/30 p-3">
                         <i class="fa-solid fa-bolt text-xl text-amber-300"></i><span class="text-xs font-semibold text-white">Performance<br><span class="font-normal text-slate-400">Optimized & Secure</span></span>
@@ -90,13 +90,13 @@
     <div class="relative z-10 border-y border-white/10 bg-[#050a1b]/90">
         <div class="mx-auto grid max-w-7xl grid-cols-2 gap-4 px-4 py-5 sm:px-6 md:grid-cols-3 lg:grid-cols-6 lg:items-center lg:gap-5 lg:px-8">
             <div class="col-span-2 flex items-center gap-3 border-b border-white/10 pb-3 md:col-span-3 lg:col-span-1 lg:border-b-0 lg:border-r lg:pb-0 lg:pr-4">
-                <i class="fa-regular fa-lightbulb text-xl text-amber-300"></i><span class="text-sm font-bold text-white">Ce que j'apporte</span>
+                <i class="fa-regular fa-lightbulb text-xl text-amber-300"></i><span class="text-sm font-bold text-white" data-i18n="hero_value_title">Ce que j'apporte</span>
             </div>
-            <div class="text-xs text-slate-300"><i class="fa-solid fa-circle-check mr-2 text-emerald-400"></i>Une hiérarchie visuelle claire</div>
-            <div class="text-xs text-slate-300"><i class="fa-solid fa-circle-check mr-2 text-emerald-400"></i>Backend fiable et lisible</div>
-            <div class="text-xs text-slate-300"><i class="fa-solid fa-circle-check mr-2 text-emerald-400"></i>IA pensée pour l'usage</div>
-            <div class="text-xs text-slate-300"><i class="fa-solid fa-circle-check mr-2 text-emerald-400"></i>Interfaces adaptées aux écrans</div>
-            <div class="text-xs text-slate-300"><i class="fa-solid fa-circle-check mr-2 text-emerald-400"></i>Une identité visuelle cohérente</div>
+            <div class="text-xs text-slate-300"><i class="fa-solid fa-circle-check mr-2 text-emerald-400"></i><span data-i18n="hero_value_hierarchy">Une hiérarchie visuelle claire</span></div>
+            <div class="text-xs text-slate-300"><i class="fa-solid fa-circle-check mr-2 text-emerald-400"></i><span data-i18n="hero_value_backend">Backend fiable et lisible</span></div>
+            <div class="text-xs text-slate-300"><i class="fa-solid fa-circle-check mr-2 text-emerald-400"></i><span data-i18n="hero_value_ai">AI pensée pour l'usage</span></div>
+            <div class="text-xs text-slate-300"><i class="fa-solid fa-circle-check mr-2 text-emerald-400"></i><span data-i18n="hero_value_responsive">Interfaces adaptées aux écrans</span></div>
+            <div class="text-xs text-slate-300"><i class="fa-solid fa-circle-check mr-2 text-emerald-400"></i><span data-i18n="hero_value_identity">Une identité visuelle cohérente</span></div>
         </div>
     </div>
 </section>

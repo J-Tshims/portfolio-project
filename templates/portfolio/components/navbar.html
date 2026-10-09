@@ -14,18 +14,18 @@
 
             <!-- Desktop Nav Links -->
             <nav class="hidden md:flex items-center space-x-8 text-sm font-medium">
-                <a href="#hero" class="nav-link text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary transition-colors">Accueil</a>
-                <a href="#about" class="nav-link text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary transition-colors">À propos</a>
-                <a href="#skills" class="nav-link text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary transition-colors">Compétences</a>
-                <a href="#projects" class="nav-link text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary transition-colors">Projets</a>
-                <a href="#parcours" class="nav-link text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary transition-colors">Parcours</a>
-                <a href="#services" class="nav-link text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary transition-colors">Services</a>
-                <a href="#contact" class="nav-link text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary transition-colors">Contact</a>
+                <a href="#hero" class="nav-link text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary transition-colors" data-i18n="nav_home">Accueil</a>
+                <a href="#about" class="nav-link text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary transition-colors" data-i18n="nav_about">À propos</a>
+                <a href="#skills" class="nav-link text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary transition-colors" data-i18n="nav_skills">Compétences</a>
+                <a href="#projects" class="nav-link text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary transition-colors" data-i18n="nav_projects">Projets</a>
+                <a href="#parcours" class="nav-link text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary transition-colors" data-i18n="nav_journey">Parcours</a>
+                <a href="#services" class="nav-link text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary transition-colors" data-i18n="nav_services">Services</a>
+                <a href="#contact" class="nav-link text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary transition-colors" data-i18n="nav_contact">Contact</a>
             </nav>
 
             <!-- Sélecteur de langue et action principale -->
             <div class="hidden md:flex items-center space-x-4">
-                <div class="inline-flex items-center gap-1 rounded-xl border border-white/10 bg-slate-950/70 p-1 text-xs font-semibold shadow-[0_0_14px_rgba(217,70,239,0.12)]" role="group" aria-label="Choisir la langue">
+                <div class="inline-flex items-center gap-1 rounded-xl border border-white/10 bg-slate-950/70 p-1 text-xs font-semibold shadow-[0_0_14px_rgba(217,70,239,0.12)]" role="group" aria-label="Choisir la langue" data-i18n-aria-label="language_label">
                     <svg class="ml-1.5 h-4 w-4 text-secondary drop-shadow-[0_0_5px_rgba(22,139,255,0.7)]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                         <circle cx="12" cy="12" r="9"></circle>
                         <path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"></path>
@@ -33,14 +33,14 @@
                     <button type="button" data-language="fr" aria-pressed="true" class="rounded-lg bg-white/10 px-2 py-1.5 text-white transition-colors">FR</button>
                     <button type="button" data-language="en" aria-pressed="false" class="rounded-lg px-2 py-1.5 text-slate-400 transition-colors hover:text-white">EN</button>
                 </div>
-                <a href="#contact" class="px-5 py-2.5 rounded-xl font-medium text-white bg-gradient-to-r from-primary via-violet-500 to-secondary hover:opacity-90 transition-opacity shadow-lg shadow-fuchsia-500/25">
+                <a href="#contact" class="px-5 py-2.5 rounded-xl font-medium text-white bg-gradient-to-r from-primary via-violet-500 to-secondary hover:opacity-90 transition-opacity shadow-lg shadow-fuchsia-500/25" data-i18n="nav_cta">
                     Me contacter
                 </a>
             </div>
 
             <!-- Commandes mobiles -->
             <div class="flex items-center space-x-3 md:hidden">
-                <div class="inline-flex items-center gap-1 rounded-xl border border-white/10 bg-slate-950/70 p-1 text-xs font-semibold shadow-[0_0_14px_rgba(217,70,239,0.12)]" role="group" aria-label="Choisir la langue">
+                <div class="inline-flex items-center gap-1 rounded-xl border border-white/10 bg-slate-950/70 p-1 text-xs font-semibold shadow-[0_0_14px_rgba(217,70,239,0.12)]" role="group" aria-label="Choisir la langue" data-i18n-aria-label="language_label">
                     <svg class="ml-1 h-4 w-4 text-secondary drop-shadow-[0_0_5px_rgba(22,139,255,0.7)]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                         <circle cx="12" cy="12" r="9"></circle>
                         <path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"></path>
@@ -61,15 +61,15 @@
         <!-- Mobile Dropdown Menu -->
         <div id="mobileMenu" aria-hidden="true" inert class="glass-panel border-t border-white/10 px-6 md:hidden">
             <nav class="space-y-4">
-            <a href="#hero" class="block text-slate-700 dark:text-slate-200 font-medium py-2 mobile-link">Accueil</a>
-            <a href="#about" class="block text-slate-700 dark:text-slate-200 font-medium py-2 mobile-link">À propos</a>
-            <a href="#skills" class="block text-slate-700 dark:text-slate-200 font-medium py-2 mobile-link">Compétences</a>
-            <a href="#projects" class="block text-slate-700 dark:text-slate-200 font-medium py-2 mobile-link">Projets</a>
-            <a href="#parcours" class="block text-slate-700 dark:text-slate-200 font-medium py-2 mobile-link">Parcours</a>
-            <a href="#services" class="block text-slate-700 dark:text-slate-200 font-medium py-2 mobile-link">Services</a>
-            <a href="#contact" class="block text-slate-700 dark:text-slate-200 font-medium py-2 mobile-link">Contact</a>
+            <a href="#hero" class="block text-slate-700 dark:text-slate-200 font-medium py-2 mobile-link" data-i18n="nav_home">Accueil</a>
+            <a href="#about" class="block text-slate-700 dark:text-slate-200 font-medium py-2 mobile-link" data-i18n="nav_about">À propos</a>
+            <a href="#skills" class="block text-slate-700 dark:text-slate-200 font-medium py-2 mobile-link" data-i18n="nav_skills">Compétences</a>
+            <a href="#projects" class="block text-slate-700 dark:text-slate-200 font-medium py-2 mobile-link" data-i18n="nav_projects">Projets</a>
+            <a href="#parcours" class="block text-slate-700 dark:text-slate-200 font-medium py-2 mobile-link" data-i18n="nav_journey">Parcours</a>
+            <a href="#services" class="block text-slate-700 dark:text-slate-200 font-medium py-2 mobile-link" data-i18n="nav_services">Services</a>
+            <a href="#contact" class="block text-slate-700 dark:text-slate-200 font-medium py-2 mobile-link" data-i18n="nav_contact">Contact</a>
             <div class="pt-2">
-                <a href="#contact" class="mobile-link w-full block text-center py-3 rounded-xl font-medium text-white bg-gradient-to-r from-primary via-violet-500 to-secondary shadow-lg shadow-fuchsia-500/25">
+                <a href="#contact" class="mobile-link w-full block text-center py-3 rounded-xl font-medium text-white bg-gradient-to-r from-primary via-violet-500 to-secondary shadow-lg shadow-fuchsia-500/25" data-i18n="nav_cta">
                     Me contacter
                 </a>
             </div>

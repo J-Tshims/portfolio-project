@@ -9,6 +9,7 @@ Projet personnel pour construire un portfolio avec Django et apprendre progressi
 - Les modeles Project, Skill, Service et Experience existent et sont inscrits dans l'administration Django.
 - La section des projets affiche les donnees de la base; les sections competences, services et parcours restent actuellement en dur dans leurs templates.
 - Le nom visible de la page d'accueil est maintenant Jonathan Tshimbalanga. La photo `static/portfolio/images/Jonathan.png` est reliée au cadre de profil; le chemin statique a été vérifié dans le rendu Django.
+- Le sélecteur FR/EN traduit les textes fixes du portfolio, avec le français par défaut. Les quatre descriptions de projets actuellement affichées sont aussi traduites; les titres professionnels, technologies, acronymes et titres des projets restent inchangés. Les futurs contenus saisis dans l'administration ne sont pas traduits automatiquement.
 - Le hero reprend la référence avec une composition en deux colonnes, des encarts de compétences, une bande de points forts et une palette bleu nuit, magenta, violet et bleu électrique. Les sections suivantes gardent leur disposition avec des accents harmonisés.
 - L'accueil a été vérifié dans le navigateur en bureau et mobile sans débordement horizontal. Le bouton secondaire du hero mène au parcours, car aucun CV PDF n'est encore fourni.
 - Le formulaire de contact et plusieurs coordonnees et liens sociaux sont encore des exemples; remplace-les par tes vraies informations avant publication.
