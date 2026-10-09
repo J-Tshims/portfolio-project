@@ -27,7 +27,7 @@
                                 </div>
                                 <div>
                                     <div class="text-xs text-slate-400">Email</div>
-                                    <a href="mailto:alexandre.vance@example.com" class="font-semibold text-slate-900 dark:text-white hover:text-primary transition-colors">[alexandre.vance@example.com]</a>
+                                    <a href="mailto:jonatshims.pro@gmail.com" class="font-semibold text-slate-900 dark:text-white hover:text-primary transition-colors">jonatshims.pro@gmail.com</a>
                                 </div>
                             </div>
 
@@ -46,13 +46,13 @@
                         <div class="pt-4 border-t border-white/10">
                             <div class="text-xs text-slate-400 mb-4" data-i18n="contact_social">Réseaux Sociaux</div>
                             <div class="flex items-center space-x-4">
-                                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-xl glass-panel flex items-center justify-center text-slate-700 dark:text-white hover:text-primary transition-colors">
+                                <a href="https://github.com/J-Tshims" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-xl glass-panel flex items-center justify-center text-slate-700 dark:text-white hover:text-primary transition-colors">
                                     <i class="fa-brands fa-github text-lg"></i>
                                 </a>
-                                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-xl glass-panel flex items-center justify-center text-slate-700 dark:text-white hover:text-secondary transition-colors">
+                                <a href="https://www.linkedin.com/in/jonathan-tshimbalanga/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-xl glass-panel flex items-center justify-center text-slate-700 dark:text-white hover:text-secondary transition-colors">
                                     <i class="fa-brands fa-linkedin text-lg"></i>
                                 </a>
-                                <a href="mailto:alexandre.vance@example.com" class="w-10 h-10 rounded-xl glass-panel flex items-center justify-center text-slate-700 dark:text-white hover:text-primary transition-colors">
+                                <a href="mailto:jonatshims.pro@gmail.com" class="w-10 h-10 rounded-xl glass-panel flex items-center justify-center text-slate-700 dark:text-white hover:text-primary transition-colors">
                                     <i class="fa-solid fa-envelope text-lg"></i>
                                 </a>
                             </div>
@@ -62,29 +62,31 @@
 
                 <!-- Contact Form (Right) -->
                 <div class="lg:col-span-7">
-                    <form id="contactForm" class="glass-panel p-8 rounded-2xl space-y-6 shadow-xl">
+                    <form id="contactForm" method="post" action="{% url 'home' %}" class="glass-panel p-8 rounded-2xl space-y-6 shadow-xl">
+                        {% csrf_token %}
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                             <div class="space-y-2">
                                 <label for="name" class="block text-xs font-mono uppercase text-slate-400" data-i18n="form_name">Nom</label>
-                                <input type="text" id="name" required class="w-full px-4 py-3 rounded-xl bg-black/20 border border-white/10 text-slate-900 dark:text-white focus:outline-none focus:border-primary transition-colors" placeholder="Votre nom" data-i18n-placeholder="form_name_placeholder">
+                                <input type="text" id="name" name="name" autocomplete="name" required class="w-full px-4 py-3 rounded-xl bg-black/20 border border-white/10 text-slate-900 dark:text-white focus:outline-none focus:border-primary transition-colors" placeholder="Votre nom" data-i18n-placeholder="form_name_placeholder">
                             </div>
                             <div class="space-y-2">
                                 <label for="email" class="block text-xs font-mono uppercase text-slate-400">Email</label>
-                                <input type="email" id="email" required class="w-full px-4 py-3 rounded-xl bg-black/20 border border-white/10 text-slate-900 dark:text-white focus:outline-none focus:border-primary transition-colors" placeholder="votre@email.com" data-i18n-placeholder="form_email_placeholder">
+                                <input type="email" id="email" name="email" autocomplete="email" required class="w-full px-4 py-3 rounded-xl bg-black/20 border border-white/10 text-slate-900 dark:text-white focus:outline-none focus:border-primary transition-colors" placeholder="votre@email.com" data-i18n-placeholder="form_email_placeholder">
                             </div>
                         </div>
                         <div class="space-y-2">
                                 <label for="subject" class="block text-xs font-mono uppercase text-slate-400" data-i18n="form_subject">Sujet</label>
-                                <input type="text" id="subject" required class="w-full px-4 py-3 rounded-xl bg-black/20 border border-white/10 text-slate-900 dark:text-white focus:outline-none focus:border-primary transition-colors" placeholder="Sujet de votre message" data-i18n-placeholder="form_subject_placeholder">
+                                <input type="text" id="subject" name="subject" required class="w-full px-4 py-3 rounded-xl bg-black/20 border border-white/10 text-slate-900 dark:text-white focus:outline-none focus:border-primary transition-colors" placeholder="Sujet de votre message" data-i18n-placeholder="form_subject_placeholder">
                         </div>
                         <div class="space-y-2">
                             <label for="message" class="block text-xs font-mono uppercase text-slate-400" data-i18n="form_message">Message</label>
-                            <textarea id="message" rows="5" required class="w-full px-4 py-3 rounded-xl bg-black/20 border border-white/10 text-slate-900 dark:text-white focus:outline-none focus:border-primary transition-colors resize-none" placeholder="Votre message..." data-i18n-placeholder="form_message_placeholder"></textarea>
+                            <textarea id="message" name="message" rows="5" required class="w-full px-4 py-3 rounded-xl bg-black/20 border border-white/10 text-slate-900 dark:text-white focus:outline-none focus:border-primary transition-colors resize-none" placeholder="Votre message..." data-i18n-placeholder="form_message_placeholder"></textarea>
                         </div>
                         <button type="submit" class="w-full py-4 rounded-xl font-semibold text-white bg-gradient-to-r from-primary via-violet-500 to-secondary hover:opacity-90 transition-opacity shadow-lg shadow-fuchsia-500/25 flex items-center justify-center space-x-2">
                             <span data-i18n="form_submit">Envoyer le message</span>
                             <i class="fa-solid fa-paper-plane"></i>
                         </button>
+                        <p id="contactStatus" class="hidden text-sm text-slate-300" role="status" aria-live="polite"></p>
                     </form>
                 </div>
             </div>

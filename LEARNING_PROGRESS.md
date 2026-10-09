@@ -30,6 +30,8 @@ Apprendre Django en construisant ce portfolio, une étape à la fois. L'utilisat
 - Le sélecteur FR/EN traduit les textes fixes du portfolio et les attributs accessibles, avec le français par défaut. Vérification navigateur FR/EN : navigation, paragraphes, formulaires et texte alternatif changent; le titre professionnel et les noms techniques restent identiques, toutes les clés existent et aucun débordement mobile n'apparaît. Django et `node --check` réussissent.
 - La section Compétences traduit maintenant ses catégories génériques et son descriptif d'intelligence artificielle en français. Les noms techniques et sigles (Python, Django, Docker, PostgreSQL, PyTorch, LLMs, RAG) restent identiques; bascule FR/EN vérifiée dans le navigateur.
 - La zone Projets traduit les descriptions des quatre projets présents selon la langue choisie; titres, catégories et technologies restent inchangés. Les nouveaux projets de l'admin gardent leur description d'origine. Le rendu FR/EN, `python manage.py check` et `node --check` ont été vérifiés.
+- Les coordonnées publiques fournies par Jonathan sont affichées dans Contact et le footer; rendu des liens vérifié dans le navigateur.
+- Le formulaire POST envoie à la vue Django existante; `ContactForm` valide les champs, le jeton CSRF protège la requête et le backend console affiche les e-mails dans le terminal. Tests d'envoi/refus, contrôle Django, syntaxe JS et POST navigateur réussis. Aucun modèle ni migration ajouté. Un vrai envoi nécessite encore un fournisseur SMTP en production.
 - Les captures du navigateur en bureau et mobile ont été vérifiées; le nom tient sur une ligne dans la carte photo et aucun débordement horizontal n'est présent.
 - Le formulaire de contact reste une maquette frontend qui affiche un toast local; aucun message n'est envoyé ni enregistré.
 
@@ -51,7 +53,7 @@ Ne pas modifier les fichiers à la place de l'utilisateur : il apprend en réali
 
 1. Remplacer les exemples de localisation, email et liens sociaux. Ajouter le CV PDF si le bouton de téléchargement de la référence est souhaité.
 2. Ajouter les vrais projets et contenus dans l'admin, puis rendre les sections compétences, services et parcours dynamiques.
-3. Finir et tester le formulaire de contact.
+3. Configurer un fournisseur SMTP sécurisé pour envoyer réellement les messages en production.
 4. Préparer l'hébergement, les réglages de sécurité, les fichiers statiques et les données de production.
 5. Relire le portfolio en mobile et ordinateur, exécuter les tests, puis préparer le déploiement.
 

@@ -12,7 +12,7 @@ Projet personnel pour construire un portfolio avec Django et apprendre progressi
 - Le sélecteur FR/EN traduit les textes fixes du portfolio, avec le français par défaut. Les quatre descriptions de projets actuellement affichées sont aussi traduites; les titres professionnels, technologies, acronymes et titres des projets restent inchangés. Les futurs contenus saisis dans l'administration ne sont pas traduits automatiquement.
 - Le hero reprend la référence avec une composition en deux colonnes, des encarts de compétences, une bande de points forts et une palette bleu nuit, magenta, violet et bleu électrique. Les sections suivantes gardent leur disposition avec des accents harmonisés.
 - L'accueil a été vérifié dans le navigateur en bureau et mobile sans débordement horizontal. Le bouton secondaire du hero mène au parcours, car aucun CV PDF n'est encore fourni.
-- Le formulaire de contact et plusieurs coordonnees et liens sociaux sont encore des exemples; remplace-les par tes vraies informations avant publication.
+- Les coordonnées publiques sont affichées dans Contact et le pied de page. Le formulaire envoie un POST validé par Django et protégé par CSRF; en développement, `EMAIL_BACKEND` affiche les messages dans le terminal sans les transmettre réellement. Aucun stockage en base n'est utilisé. Un fournisseur SMTP reste à configurer pour la production.
 - La vue `home` dans `portfolio/views.py` rend `portfolio/base.html` et est reliee a l'URL `/`; l'utilisateur a confirme que la page repond avec HTTP 200.
 - Django est configure pour trouver les templates globaux et les fichiers statiques; `base.html` et `theme.js` ont ete verifies avec les outils Django.
 - Le formulaire de contact est une maquette frontend : son message n'est pas encore envoye ni enregistre.
@@ -64,7 +64,7 @@ Le panneau d'administration est disponible sur `http://127.0.0.1:8000/admin/`. L
 - [x] Ajouter la photo de profil et vérifier que Django la sert.
 - [x] Vérifier visuellement la photo de profil dans le navigateur.
 - [x] Adapter le hero à la référence et harmoniser la palette des autres sections.
-- [ ] Connecter le formulaire de contact au backend avec validation et protection CSRF.
+- [x] Connecter le formulaire de contact au backend avec validation et protection CSRF (backend console pour les tests locaux).
 - [ ] Ecrire des tests pour la page, les contenus et le formulaire.
 
 ## Securite avant publication
