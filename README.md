@@ -1,25 +1,25 @@
-#  Portfolio Personnel - Jonathan Tshimbalanga
+# 🚀 Professional Portfolio - Jonathan Tshimbalanga
 
-Bienvenue sur le dépôt de mon portfolio professionnel. Ce site web met en valeur mes compétences, mes projets et mon parcours en tant qu'**AI Software Engineer & Backend Developer**.
+Welcome to the repository of my professional portfolio. This website showcases my skills, projects, and career path as an **AI Software Engineer & Backend Developer**.
 
-##  Fonctionnalités
+## ✨ Features
 
-- **Design Dark Mode Futuriste :** Interface sombre et élégante avec des accents néons et des cartes en glassmorphism.
-- **Multilingue (FR / EN) :** Sélecteur de langue dynamique préservant les termes techniques et acronymes en anglais.
-- **Formulaire de contact opérationnel :** Sécurisé avec Django (protection CSRF, validation des champs et traitement backend).
-- **Responsive Design :** Navigation fluide et adaptée sur tous les écrans (desktop et mobile).
+- **Futuristic Dark Mode Design:** Sleek dark interface with neon accents and glassmorphism cards.
+- **Multilingual Support (FR / EN):** Dynamic language switcher preserving technical terms and acronyms in English.
+- **Functional Contact Form:** Secured with Django (CSRF protection, input validation, and backend processing).
+- **Fully Responsive Design:** Smooth and adapted navigation across all screen sizes (desktop and mobile).
 
-##  Stack Technique
+## 🛠️ Tech Stack
 
-- **Backend :** Python, Django, SQLite
-- **Frontend :** HTML5, Tailwind CSS, JavaScript Vanilla
-- **Outils & Versioning :** Git, GitHub
+- **Backend:** Python, Django, SQLite
+- **Frontend:** HTML5, Tailwind CSS, Vanilla JavaScript
+- **Tools & Versioning:** Git, GitHub
 
-## ⚙️ Installation et Lancement local
+## ⚙️ Local Installation & Setup
 
-Pour lancer le projet sur votre machine (environnement Windows / PowerShell) :
+To run this project locally on your machine (Windows / PowerShell environment):
 
-1. Cloner le dépôt :
+1. Clone the repository:
    ```bash
-   git clone [https://github.com/ton-pseudo/ton-repo.git](https://github.com/ton-pseudo/ton-repo.git)
-   cd ton-repo
+   git clone [https://github.com/JonathanTshimbalanga/portfolio.git](https://github.com/JonathanTshimbalanga/portfolio.git)
+   cd portfolio
