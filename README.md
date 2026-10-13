@@ -1,76 +1,25 @@
-# Portfolio Django
+#  Portfolio Personnel - Jonathan Tshimbalanga
 
-Projet personnel pour construire un portfolio avec Django et apprendre progressivement le fonctionnement du backend.
+Bienvenue sur le dépôt de mon portfolio professionnel. Ce site web met en valeur mes compétences, mes projets et mon parcours en tant qu'**AI Software Engineer & Backend Developer**.
 
-## Etat actuel
+##  Fonctionnalités
 
-- Le frontend est decoupe en templates Django dans `templates/portfolio/` et en fichiers JavaScript dans `static/portfolio/js/`.
-- L'application `portfolio` est inscrite dans `INSTALLED_APPS`.
-- Les modeles Project, Skill, Service et Experience existent et sont inscrits dans l'administration Django.
-- La section des projets affiche les donnees de la base; les sections competences, services et parcours restent actuellement en dur dans leurs templates.
-- Le nom visible de la page d'accueil est maintenant Jonathan Tshimbalanga. La photo `static/portfolio/images/Jonathan.png` est reliée au cadre de profil; le chemin statique a été vérifié dans le rendu Django.
-- Le sélecteur FR/EN traduit les textes fixes du portfolio, avec le français par défaut. Les quatre descriptions de projets actuellement affichées sont aussi traduites; les titres professionnels, technologies, acronymes et titres des projets restent inchangés. Les futurs contenus saisis dans l'administration ne sont pas traduits automatiquement.
-- Le hero reprend la référence avec une composition en deux colonnes, des encarts de compétences, une bande de points forts et une palette bleu nuit, magenta, violet et bleu électrique. Les sections suivantes gardent leur disposition avec des accents harmonisés.
-- L'accueil a été vérifié dans le navigateur en bureau et mobile sans débordement horizontal. Le bouton secondaire du hero mène au parcours, car aucun CV PDF n'est encore fourni.
-- Les coordonnées publiques sont affichées dans Contact et le pied de page. Le formulaire envoie un POST validé par Django et protégé par CSRF; en développement, `EMAIL_BACKEND` affiche les messages dans le terminal sans les transmettre réellement. Aucun stockage en base n'est utilisé. Un fournisseur SMTP reste à configurer pour la production.
-- La vue `home` dans `portfolio/views.py` rend `portfolio/base.html` et est reliee a l'URL `/`; l'utilisateur a confirme que la page repond avec HTTP 200.
-- Django est configure pour trouver les templates globaux et les fichiers statiques; `base.html` et `theme.js` ont ete verifies avec les outils Django.
-- Le formulaire de contact est une maquette frontend : son message n'est pas encore envoye ni enregistre.
-- Les migrations integrees de Django pour `admin`, `auth`, `contenttypes` et `sessions` ont ete appliquees avec succes.
-- Le depot local est sur `master`, propre et synchronisé avec `origin/master`. Le commit `929d59d` contenant les modèles, migrations, projets dynamiques, identité et photo de profil a été poussé.
-- La sortie de `git status --short --ignored` a confirme que `.venv/`, `db.sqlite3` et les caches Python sont ignores.
-- Le projet utilise SQLite en local. La version de Django constatee dans l'environnement lors de la redaction est `6.0.3`.
+- **Design Dark Mode Futuriste :** Interface sombre et élégante avec des accents néons et des cartes en glassmorphism.
+- **Multilingue (FR / EN) :** Sélecteur de langue dynamique préservant les termes techniques et acronymes en anglais.
+- **Formulaire de contact opérationnel :** Sécurisé avec Django (protection CSRF, validation des champs et traitement backend).
+- **Responsive Design :** Navigation fluide et adaptée sur tous les écrans (desktop et mobile).
 
-## Outils
+##  Stack Technique
 
-- Python
-- Django
-- SQLite
-- HTML, Tailwind CSS via CDN et JavaScript
+- **Backend :** Python, Django, SQLite
+- **Frontend :** HTML5, Tailwind CSS, JavaScript Vanilla
+- **Outils & Versioning :** Git, GitHub
 
-## Installation locale (Windows PowerShell)
+## ⚙️ Installation et Lancement local
 
-Depuis le dossier qui contient `manage.py` :
+Pour lancer le projet sur votre machine (environnement Windows / PowerShell) :
 
-```powershell
-python -m venv .venv
-.\.venv\Scripts\Activate.ps1
-python -m pip install "Django==6.0.3"
-```
-
-Si l'environnement virtuel `.venv` existe deja, active-le sans le recreer. Ensuite, verifie la configuration et lance le serveur :
-
-```powershell
-python manage.py check
-python manage.py runserver
-```
-
-Le panneau d'administration est disponible sur `http://127.0.0.1:8000/admin/`. La page du portfolio repond sur `http://127.0.0.1:8000/` en developpement.
-
-## Prochaines etapes
-
-- [x] Configurer Django pour trouver les templates globaux et les fichiers statiques.
-- [x] Creer la vue `home` qui rend `portfolio/base.html`.
-- [x] Relier la vue `home` a l'URL racine `/` et verifier la reponse HTTP 200.
-- [x] Appliquer les migrations integrees de Django avant d'utiliser l'administration.
-- [x] Initialiser le depot Git local et preparer les fichiers non ignores.
-- [x] Verifier que `.venv/`, `db.sqlite3` et les caches sont exclus de Git.
-- [x] Creer le commit local initial.
-- [x] Vérifier, committer et pousser les changements locaux, y compris les migrations.
-- [ ] Relier le depot à un hébergeur web et préparer les réglages de production avant de partager une URL publique.
-- [x] Créer les modèles Project, Skill, Service et Experience et les enregistrer dans l'administration Django.
-- [ ] Relier les sections compétences, services et parcours aux données de l'administration.
-- [ ] Remplacer les identités, coordonnées et liens d'exemple par les informations réelles.
-- [x] Ajouter la photo de profil et vérifier que Django la sert.
-- [x] Vérifier visuellement la photo de profil dans le navigateur.
-- [x] Adapter le hero à la référence et harmoniser la palette des autres sections.
-- [x] Connecter le formulaire de contact au backend avec validation et protection CSRF (backend console pour les tests locaux).
-- [ ] Ecrire des tests pour la page, les contenus et le formulaire.
-
-## Securite avant publication
-
-`config/settings.py` lit maintenant la cle Django depuis une variable d'environnement. Ne publie jamais sa valeur sur GitHub et assure-toi que la variable est configuree sur chaque machine qui lance le projet.
-
-Le controle `python manage.py check --deploy` signale encore des reglages de production a preparer, dont `DEBUG`, `ALLOWED_HOSTS` et HTTPS. Le projet n'est donc pas encore prêt à être exposé publiquement.
-
-Ne publie pas non plus de mot de passe, fichier `.env`, base SQLite locale contenant des donnees privees ou autre identifiant confidentiel.
+1. Cloner le dépôt :
+   ```bash
+   git clone [https://github.com/ton-pseudo/ton-repo.git](https://github.com/ton-pseudo/ton-repo.git)
+   cd ton-repo
